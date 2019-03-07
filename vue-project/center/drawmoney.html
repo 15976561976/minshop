@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no, email=no" />
+		<meta charset="UTF-8">
+		<title>提现</title>
+		<link rel="stylesheet" href="../css/core.css">
+		<link rel="stylesheet" type="text/css" href="css/drawmoney.css">
+		<link rel="stylesheet" type="text/css" href="css/iconfont/iconfont.css">
+		<link rel="icon" type="image/x-icon" href="favicon.ico">
+		<link href="iTunesArtwork@2x.png" sizes="114x114" rel="apple-touch-icon-precomposed">
+	</head>
+	<body>
+		<div id="drawmoney">
+			<div class="header"></div>
+			<form bindsubmit="saveData" @submit.prevent="submit">
+				<div class="money">
+					<div class="li">
+						<label>可提现佣金：</label>
+						<div><span>￥</span v-cloak>{{withAmount}}</div>
+					</div>
+					<div class="li">
+						<label>提现金额：</label>
+						<input name="withdraw_price" type="number" focus="true" placeholder="请输入要提取的金额" v-model="withdraw_price" />
+					</div>
+				</div>
+				<div class="few">最低提现佣金1元</div>
+				<div class="way">
+					<span>提现方式</span>
+					<div v-if="bankCardList.length >= 1? true: false" @click="toOption()" class="select">
+						<div v-cloak>{{bankCardList[defaultcard].bank_card_name}}</div>
+						<span class="iconfont icon-xiangyoujiantou"></span>
+					</div>
+					<a v-else class="select" href="./card.html">添加银行卡</a>
+				</div>
+				<button form-type="submit" :disabled="disabledFn">提交申请</button>
+			</form>
+
+			<!-- 选择银行卡 -->
+			<div @click="hide()" class="bg" :class="option? 'bgOn':null"></div>
+			<div class="option" :class="option? 'optionOn':null">
+				<div class="title">
+					<span>选择提现方式</span>
+					<span @click="hide()" class="iconfont icon-guanbi"></span>
+				</div>
+				<div v-for="(item,i) in bankCardList" class="li cardli" @click="selectCard(i)">
+					<span class="iconfont"></span>
+					<div v-cloak>{{item.bank_card_name }}(<span v-cloak>{{item.bank_card_num | toSlice}}</span>)</div>
+					<span class="delCard"  @click.stop="delCard(item)" :sendData="i">移除</span>
+				</div>
+				<div class="li">
+					<a class="add" href="./card.html">添加银行卡</a>
+				</div>
+			</div>
+			<div v-if="visit" class="visitBg"></div>
+			<div v-if="visit" class="visit">
+				<h3>友情提示</h3>
+				<p>请选择是否确认移除银行卡</p>
+				<div class="select">
+					<span @click="conSelect($event)" @click.stop>取消</span>
+					<span @click="conSelect($event)" @click.stop class="confirm">确定</span>
+				</div>
+			</div>
+		
+			<div v-if="success" class="success" style="z-index:9999">
+				<span class="iconfont icon-success_no_circle" ></span>
+				<p v-cloak>{{msg}}</p>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="../js/vue.js"></script>
+	<script type="text/javascript" src="../js/vue-resource.js"></script>
+	<script type="text/javascript" src="../js/siteInfo.js"></script>
+	<script type="text/javascript" src="js/drawmoney.js"></script>
+</html>

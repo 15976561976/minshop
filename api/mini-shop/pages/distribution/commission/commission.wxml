@@ -1,0 +1,38 @@
+<!--pages/distribution/commission/commission.wxml-->
+<view class="container">
+  <view class="top-bar">
+    <view class="sale">
+      <text class="sale-text">分销佣金</text>
+      <view class="sale-total">
+        <text class="sale-money">{{all_amount}}</text>
+        <text class="sale-unit"> 元</text>
+      </view>
+    </view>
+    <view class="btn-wrap">
+      <navigator url="../careful/careful" class="withdrawal-btn">
+        <text>提现明细</text>
+      </navigator>
+    </view>
+  </view>
+  <view class="info">
+    <view class="item" wx:for="{{items}}"  wx:key="">
+      <view class="commission">
+        <text>{{item.option}}</text>
+      </view>
+      <view class="commission-money">
+        <text>{{item.sideInfo}}</text>
+      </view>
+    </view>
+		<navigator url= '/pages/distribution/commission/notice/notice' class="item">
+			<view class="commission">
+				<text>用户须知</text>
+			</view>
+			<view class="commission-money">
+				<text class="iconfont icon-xiangyoujiantou"></text>
+			</view>
+		</navigator>
+  </view>
+  <view class="want-withdrawal" ontap="onWithdrawal">
+    <text>我要提现</text>
+  </view>
+</view>

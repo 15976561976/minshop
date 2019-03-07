@@ -1,0 +1,30 @@
+<!--pages/reserve/record/record.wxml-->
+<view class="nav">
+	<text wx:for="{{nav}}" wx:key="idx">{{item.name}}</text>
+</view>
+<view class="list" wx:for="{{list}}" wx:key="idx">
+	<view class="name">{{item.worker.worker_name}}</view>
+	<view class="time">
+		<text>{{item.booking_time.work_day}}</text>
+		<view>{{item.booking_time.time_line}}</view>
+	</view>
+	<view class="span">
+		<span>{{item.worker.type.name}}</span>
+	</view>
+	<view bindtap="cancel" data-id = "{{item.id}}" wx:if="{{item.booking_status==0}}" class="cancel">
+		<span>取消预约</span>
+	</view>
+	<view wx:elif="{{item.booking_status == 1}}" class="achieve">
+		<span>已完成</span>
+	</view>
+	<view wx:elif="{{item.booking_status == 2}}" class="state">
+		<span>已取消</span>
+	</view>
+	<view wx:else class="state">
+		<span>已过期</span>
+	</view>
+</view>
+
+ <view class="nomore">
+  <text class="nomore-text">没有更多内容了</text>
+ </view>

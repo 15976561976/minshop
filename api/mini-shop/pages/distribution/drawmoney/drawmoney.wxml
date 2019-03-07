@@ -1,0 +1,43 @@
+<view class="header"></view>
+<form bindsubmit="saveData">
+	<view class="money">
+		<view class="li">
+			<label>可提现佣金：</label>
+			<view><span>￥</span>{{withAmount}}</view>
+		</view>
+		<view class="li">
+			<label>提现金额：</label>
+			<input name="withdraw_price" type="number" focus="true" placeholder="请输入要提取的金额" />
+		</view>
+	</view>
+	<view class="few">最低提现佣金1元</view>
+	<view class="way">
+		<text>提现方式</text>
+		<view wx:if="{{havecard}}" bindtap="option" class="select">
+			<view>
+				<span class="iconfont {{cardlist[defaultcard].icon}}"></span>{{cardlist[defaultcard].bank_card_name}}
+			</view>
+			<span class="iconfont icon-xiangyoujiantou"></span>
+		</view>
+		<view wx:else class="select" bindtap="option">添加银行卡</view>
+	</view>
+	<button form-type="submit" disabled="{{disabled}}">提交申请</button>
+</form>
+
+<!-- 选择银行卡 -->
+<view bindtap="hide" class="bg {{option? 'bgOn':null}}"></view>
+<view class="option {{option? 'optionOn':null}}">
+	<view class="title">
+		<text>选择提现方式</text>
+		<span bindtap="hide" class="iconfont icon-guanbi"></span>
+	</view>
+	<view wx:for="{{cardlist}}" class="li" wx:key="index" wx:index="index" data-item="{{index}}" data-idx="{{item}}"
+	 bindtap="selectCard">
+		<span class="iconfont {{item.icon}}"></span>
+		<view>{{item.bank_card_name}}(<span>{{item.lastNummber}}</span>)</view>
+		<span class="delCard" catchtap="delCard" data-item="{{index}}" data-idx="{{item}}">移除</span>
+	</view>
+	<view class="li">
+		<view bindtap="addCard" class="add" url="./card">添加银行卡</view>
+	</view>
+</view>

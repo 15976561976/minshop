@@ -1,0 +1,30 @@
+<!--miniprogram/pages/test/test.wxml-->
+<weekCalendar timeBean="{{timeBean}}" bind:lastWeek="lastWeek" bind:nextWeek="nextWeek" bind:dayClick="dayClick"></weekCalendar>
+<!-- <view class="hint">
+	<span class="iconfont icon-gantanhao"></span>
+	<text>温馨提示：超过17：30之后不可再挂当天的号。</text>
+</view> -->
+
+<view class="ul" wx:if="{{list.length >=1? true : false}}">
+	<navigator bindtap="toTime" data-id="{{item.worker_id}}" url="../time/time" class="li" wx:for="{{list}}" wx:key="index" data-item="index">
+		<view class="img">
+			<image mode="aspectFill" src="{{item.worker.avatar.file_path}}"></image>
+		</view>
+		<view class="cont">
+			<text class="name">{{item.worker.worker_name}}</text>
+			<text class="post">{{item.worker.level}}</text>
+<!-- 			<view wx:if="surplus" class="surplus">
+				剩余<text class="current">{{item.worker.booking_num}}</text>个位
+			</view>
+			<view class="surplus" wx:else>
+				<text class="current">已满</text>
+			</view> -->
+		</view>
+		<span class="iconfont icon-xiangyoujiantou"></span>
+	</navigator>
+</view>
+<view class="nolist" wx:else>
+	所有日期没有排班技师
+</view>
+
+

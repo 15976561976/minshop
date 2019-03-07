@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui"/>
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+	<meta name="format-detection" content="telephone=no, email=no"/>
+	<meta charset="UTF-8">
+	<title>收银台</title>
+	<link rel="stylesheet" href="./css/core.css">
+	<link rel="stylesheet" href="./css/icon.css">
+	<link rel="stylesheet" href="./css/home.css">
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+	<link href="iTunesArtwork@2x.png" sizes="114x114" rel="apple-touch-icon-precomposed">
+</head>
+<body>
+
+	<header class="aui-header-default aui-header-fixed">
+		<a href="javascript:history.back(-1)" class="aui-header-item">
+			<i class="aui-icon aui-icon-back"></i>
+		</a>
+		<div class="aui-header-center aui-header-center-clear">
+			<div class="aui-header-center-logo">
+				<div class="">收银台</div>
+			</div>
+		</div>
+<!-- 		<a href="#" class="aui-header-item-icon"   style="min-width:0">
+			<i class="aui-icon aui-icon-member"></i>
+		</a> -->
+	</header>
+
+	<div id="settlement">
+		<section class="aui-settle-content">
+
+			<div class="aui-settle-ways">
+				支付方式
+			</div>
+			<div class="aui-settle-choice" v-for="(way,ind) in payWays">
+				<a href="#" class="aui-address-cell  aui-fl-arrow-clear">
+					<div class="aui-address-cell-hd">
+						<img :src="way.img" alt="">
+					</div>
+					<div class="aui-address-cell-bd" v-cloak>
+						{{way.name}}
+						<p v-cloak>{{way.desc}}</p>
+					</div>
+					<div class="aui-address-cell-ft">
+						<input type="radio" class="check check-pay goods-check goodsCheck"  name="selectWay"
+						:checked="way.select" @click="selectWay($event, ind)">
+					</div>
+				</a>
+			</div>
+		</section>
+		<div class="aui-settle-payment">
+			<a href="javascript:void(0)" @click="pay" v-cloak>微信支付 {{money}} 元</a>
+		</div>
+	</div>
+	<script type="text/javascript" src="./js/vue.js"></script>
+	<script type="text/javascript" src="./js/vue-resource.js"></script>
+	<script type="text/javascript" src="./js/Settlement.js"></script>
+</body>
+</html>

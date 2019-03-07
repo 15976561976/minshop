@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui"/>
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+	<meta name="format-detection" content="telephone=no, email=no"/>
+	<meta charset="UTF-8">
+	<title>微商城</title>
+	<link rel="stylesheet" type="text/css" href="./css/core.css">
+	<link rel="stylesheet" type="text/css" href="./css/icon.css">
+	<link rel="stylesheet" type="text/css" href="./css/home.css">
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+	<link href="iTunesArtwork@2x.png" sizes="114x114" rel="apple-touch-icon-precomposed">
+	<style type="text/css">
+
+	#scrollBg{ width: 100%; height: 45px; line-height: 45px;background: rgba(251,55,67,0.8); display: none; z-index:-1; position: fixed; left: 0; top:0; text-align: center; font-size: 20px; color: #fff; }
+
+	.container {
+		height: 600px;
+		overflow-y: scroll;
+	}
+
+</style>
+</head>
+<body>
+	<div id="index" class="container" @scroll="scroll" :style="{height: height + 'px'}">
+		<header class="aui-header-default aui-header-fixed aui-header-clear-bg" :class="{'top-search-bar': hasBg}"> 
+			<a href="#" class="aui-header-item">
+				<i class="aui-icon aui-icon-code"></i>
+			</a>
+			<div class="aui-header-center aui-header-center-clear"  style="margin-right:50px;">
+				
+				<div class="aui-header-search-box" style="background-color:#fff" @click="console.log(1)">
+					<i class="aui-icon aui-icon-small-search"></i>
+					<a href="./search.html">
+						<input type="text"  :placeholder="placeholder" class="aui-header-search">
+					</a>
+				</div>
+				
+			</div>
+			<a href="#" class="aui-header-item-icon" style="position:absolute; right:-35px; top:0;">
+				<i class="aui-icon aui-icon-member-1"></i>
+			</a>
+			<div id="scrollBg"></div>
+		</header>
+
+		<div class="aui-content-box">
+			<div id="banner" class="aui-banner-content " data-aui-slider>
+
+				<div class="aui-banner-wrapper" :style="{'margin-left': left, 'transition': 'all 1s'}" 
+				@touchstart="touchStartHandler($event)"
+				@touchend="touchEndHandler($event)">
+					<div class="aui-banner-wrapper-item"  
+					v-for="(banner,ind) in banners" :key="ind">
+						<a :href="banner.href">
+							<img :src="banner.img" :alt="banner.alt">
+						</a>
+					</div>
+
+					
+				</div>
+				<div class="aui-banner-pagination">
+					<!-- <span v-for="(item,i) in banners" 
+					:class="['slider-pagination-item', i==bannerIndex?'slider-pagination-item-active':'']"></span> -->
+					<span v-for="(item,i) in banners" 
+					:class="[btnStyle(item)]"
+					:style="{background: i==bannerIndex?'#d4244e':item.btnColor}"></span>
+				</div>
+
+
+			</div>
+			<!-- 专场 -->
+			<div id="specialField">
+				<special-field :special-field-info="field" v-for="field in specialFields"></special-field>
+			</div>
+
+
+			<div id="recommend">
+				<div class="aui-recommend">
+					<img src="./img/bg/icon-tj1.jpg" alt="">
+					<!--<h2>为你推荐</h2> -->
+				</div>
+				<section class="aui-list-product">
+					<div class="aui-list-product-box">
+						<recommend :recommend-info="product" :recommend-ind="ind"  v-for="(product,ind) in recommends"></recommend>
+					</div>
+				</section>
+			</div>
+		</div>
+
+		<footer id="bottomBar" class="aui-footer-default aui-footer-fixed" >
+			<a :href="item.isActive?'javascript:void(0)':item.href" :name="item.icon" :class="['aui-footer-item', item.isActive? 'aui-footer-active': '']" v-for="item in items">
+				<span :class="['aui-footer-item-icon', 'aui-icon', item.icon]"></span>
+				<span class="aui-footer-item-text" v-cloak>{{item.title}}</span>
+			</a>
+		</footer>
+	</div>
+
+	<script type="text/javascript" src="./js/vue.js"></script>
+	<script type="text/javascript" src="./js/component.js"></script>
+	<script type="text/javascript" src="./js/vue-resource.js"></script>
+	<script type="text/javascript" src="./js/siteinfo.js"></script>
+	<script type="text/javascript" src="./js/home.js"></script>
+</body>
+</html>

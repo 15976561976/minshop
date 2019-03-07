@@ -1,0 +1,230 @@
+.goodsPro {
+	margin-right: 0;
+}
+
+.option {
+	width: 100%;
+	height: auto;
+}
+
+.option .bg {
+	width: 100%;
+	height: 100%;
+	background: #000;
+	opacity: 0.3;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 2;
+}
+
+.option .ages {
+	width: 100%;
+	height: auto;
+	background: #FFFFFF;
+	position: fixed;
+	bottom: 0px;
+	z-index: 14;
+	padding: 10px 10px 20px 10px;
+	box-sizing: border-box;
+}
+
+.option .ages .age {
+	display: flex;
+	justify-content: flex-start;
+	padding-bottom: 10px;
+}
+
+.option .ages .age img {
+	width: 120px;
+	height: 120px;
+	border-radius: 5px;
+	margin-top: -30px;
+	border: 1px solid #ddd;
+}
+
+.option .ages .age .price {
+	width: 470px;
+	height: auto;
+	margin-left: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	overflow: hidden;
+}
+
+.option .ages .age .price h4 {
+	font-size: 16px;
+	color: #961619;
+	line-height: 26px;
+}
+
+.option .ages .age .price p {
+	width: 400px;
+	height: auto;
+	font-size: 16px;
+	color: #999;
+	line-height: 16px;
+}
+
+.option .ages .age .iconfont {
+	position: absolute;
+	font-size: 21px;
+	top: 10px;
+	right: 10px;
+}
+
+.option .ages dl {
+	width: 100%;
+	height: auto;
+	border-top: 1px solid #ccc;
+}
+
+.option .ages dl dt {
+	width: 100%;
+	height: 36px;
+	font-size: 16px;
+	color: #666;
+	line-height: 36px;
+}
+
+.option .ages dl dd {
+	width: auto;
+	display: inline-block;
+	margin: 0px 10px 10px 0px;
+	height: 32px;
+	border-radius: 8px;
+	background: #ccc;
+	font-size: 14px;
+	color: #ffffff;
+	line-height: 32px;
+	padding: 0px 10px;
+}
+
+.option .ages dl .on {
+	background: #B92A30;
+}
+
+.option .ages .number {
+	width: 100%;
+	height: 50px;
+	display: flex;
+	border-top: 1px solid #ccc;
+	justify-content: space-between;
+	font-size: 16px;
+	color: #000;
+	line-height: 50px;
+}
+
+.option .ages .number .num {
+	width: auto;
+	height: 32px;
+}
+
+.option .ages .number .num input {
+	width: 100px;
+	height: inherit;
+	background: #f7f7f7;
+	border: 1px solid #ccc;
+	margin: 0px 5px;
+	text-align: center;
+}
+
+
+.option .ages .affirm {
+	width: 120px;
+	height: 30px;
+	text-align: center;
+	border-radius: 5px;
+	background: #B92A30;
+	font-size: 16px;
+	color: #ffffff;
+	line-height: 30px;
+	margin: 10px auto 0px auto;
+}
+
+
+.alert {
+	width: 180px;
+	height: 80px;
+	padding: 0px 10px;
+	text-align: center;
+	background: #000;
+	position: fixed;
+	top: 30%;
+	left: 50%;
+	z-index: 999;
+	margin-left: -90px;
+	opacity: 0.5;
+	font-size: 16px;
+	color: #fff;
+	line-height: 80px;
+	border-radius: 10px;
+}
+
+.buyTitle {
+	font-size: 16px;
+	line-height: 36px;
+	color: #999;
+	text-align: right;
+	padding-right: 24px;
+}
+
+.buyNum {
+	height: 50px;
+	line-height: 36px;
+	color: #999;
+	text-align: center;
+	display: flex;
+	justify-content: flex-end;
+	padding: 8px 0px;
+	border: 1rpx solid #999;
+	border-radius: 8rpx;
+	overflow: hidden;
+}
+
+.buyNum button {
+	width: 36px;
+	height: 36px;
+	background: none;
+	border: 1px solid #ddd;
+	border-radius: 4px 0px 0px 4px;
+}
+
+.buyNum .add {
+	border-radius: 0px 4px 4px 0px;
+}
+
+.buyNum input {
+	width: 60px;
+	height: 36px;
+	border: 1px solid #ddd;
+	text-align: center;
+}
+.slelct{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	padding: 0 15px;
+	line-height: 40px;
+}
+.slelct p{
+	width: 80%;
+}
+.slelct .ok{
+	color: #999;
+}
+.imgs{
+	width: 100%;
+	height: auto;
+}
+.imgs img{
+	width: 100%;
+}
+.protitle{
+	width: 96%;
+	overflow: hidden;
+	text-overflow:ellipsis;
+    white-space:nowrap;
+	color: #000;
+}

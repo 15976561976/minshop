@@ -1,0 +1,62 @@
+.yh-edit-address-mask {
+	position: absolute;
+	top: 0;
+	bottom: 0;	
+	margin: auto 0;
+	background: black;
+	opacity:  .5;
+	width: 100%;
+}
+.yh-edit-address-area {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 24rem;
+	background: #fff;
+	overflow: hidden;
+}
+.yh-edit-address-area-topbar {
+	height: 2.5rem;
+	line-height: 2.5rem;
+	color: #83878a;
+	padding: 0 .6rem;
+	font-size: .8rem;
+	text-align: center;
+	border-bottom: 1px solid #e5e5e7;
+}
+
+.yh-edit-address-back {
+	float: right;
+}
+.yh-edit-address-items {
+	height: 2.5rem;
+	border: 1px solid #e4e5e7;
+	line-height: 2.5rem;
+	overflow: hidden;
+	color: #222222;
+}
+.yh-edit-address-item {
+	float: left;
+	margin: 0 1rem;
+	font-size: .8rem;
+}
+
+.yh-edit-address-column {
+	width: 100%;
+	height: 25rem;
+	position: absolute;
+	left: 0;
+	overflow: scroll;
+	font-size: .9rem;
+	color: #666;
+	line-height: 1.5rem;
+
+}
+.yh-edit-address-column-item {
+
+	padding: .5rem 1rem;
+}
+.yh-edit-address-lists {
+	
+	height: 25rem;
+}

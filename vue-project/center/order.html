@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui"/>
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+	<meta name="format-detection" content="telephone=no, email=no"/>
+	<meta charset="UTF-8">
+	<title>分销订单</title>
+	<link rel="stylesheet" href="../css/core.css">
+	<link rel="stylesheet" type="text/css" href="css/order.css">
+	<link rel="stylesheet" type="text/css" href="../css/iconfont.css">
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+	<link href="iTunesArtwork@2x.png" sizes="114x114" rel="apple-touch-icon-precomposed">
+	</head>
+	<body>
+		<div class="container" id="myOrder">
+		 <div class="nav">
+		  <div v-for="(item,i) in options" >
+		    <div class="nav-item i" :class="i == index? 'nav-item-active':null " @click="tab(i)">
+		      <span v-cloak>{{item.title}}</span>
+		    </div>
+		  </div>
+		 </div>
+		 <div class="orders">
+		    <div class="orders-item" v-for="(ordersrder, index) in orders" :key="index">
+		      <div class="container-img">
+		        <img :src="order.file_name" class="product-img"/>
+		      </div>
+		      <div class="product-info">
+		        <div class="title">
+		          <span class="title-text" v-cloak>{{order.goods_name}}</span>
+		        </div>
+		        <div class="profit">
+		          <span class="profit-percent" v-cloak>佣金比例：{{order.discount}}%</span>
+		          <span class="my-profit" v-cloak>预计收益：{{order.total_price * order.discount / 100}}</span>
+		        </div>
+		      </div>
+		    </div>
+		 </div>
+		 <div class="nomore">
+		  <span class="nomore-text" v-cloak>{{more}}</span>
+		 </div>
+		</div>
+	</body>
+	<script type="text/javascript" src="../js/vue.js"></script>
+	<script type="text/javascript" src="../js/vue-resource.js"></script>
+	<script type="text/javascript" src="../js/siteInfo.js"></script>
+	<script type="text/javascript" src="./js/order.js"></script>
+</html>

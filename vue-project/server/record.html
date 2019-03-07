@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no, email=no" />
+		<meta charset="UTF-8">
+		<title>预约服务</title>
+		<link rel="stylesheet" href="../css/core.css">
+		<link rel="stylesheet" type="text/css" href="./css/record.css">
+		<link rel="stylesheet" type="text/css" href="../center/css/iconfont/iconfont.css">
+		<link rel="icon" type="image/x-icon" href="favicon.ico">
+		<link href="iTunesArtwork@2x.png" sizes="114x114" rel="apple-touch-icon-precomposed">
+	</head>
+	<body>
+		<div id="record">
+			<div class="nav">
+				<span v-for="item in nav">{{item}}</span>
+			</div>
+			<div v-if="list.length >= 1? true: false" class="list" v-for="(item,i) in list">
+				<div class="name">{{item.worker.worker_name}}</div>
+				<div class="time">
+					<span>{{item.booking_time.work_day}}</span>
+					<div>{{item.booking_time.time_line}}</div>
+				</div>
+				<div class="span">
+					<span>{{item.worker.type.name}}</span>
+				</div>
+				<div @click="cancel(item)" v-if="item.booking_status==0" class="cancel">
+					<span>取消预约</span>
+				</div>
+				<div v-else-if="item.booking_status == 1" class="achieve">
+					<span>已完成</span>
+				</div>
+				<div v-else-if="item.booking_status == 2" class="state">
+					<span>已取消</span>
+				</div>
+				<div v-else class="state">
+					<span>已过期</span>
+				</div>
+			</div>
+			<div v-else></div>
+			<div class="nomore">
+				<span class="nomore-span">没有更多内容了</span>
+			</div>
+
+			<div v-if="success" class="success">
+				<span class="iconfont icon-success_no_circle"></span>
+				<p>取消成功</p>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="../js/vue.js"></script>
+	<script type="text/javascript" src="../js/siteinfo.js"></script>
+	<script type="text/javascript" src="../js/vue-resource.js"></script>
+	<script type="text/javascript" src="./js/record.js"></script>
+</html>

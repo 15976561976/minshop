@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui"/>
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+	<meta name="format-detection" content="telephone=no, email=no"/>
+	<meta charset="UTF-8">
+	<title>个人中心</title>
+	<link rel="stylesheet" href="./css/core.css">
+	<link rel="stylesheet" href="./css/icon.css">
+	<link rel="stylesheet" href="./css/home.css">
+	<link rel="stylesheet" type="text/css" href="./css/me.css">
+	<link rel="stylesheet" type="text/css" href="./css/iconfont.css">
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+	<link href="iTunesArtwork@2x.png" sizes="114x114" rel="apple-touch-icon-precomposed">
+	<style type="text/css">
+
+	#scrollBg{ width: 100%; height: 45px; line-height: 45px;background: rgba(251,55,67,0.9); display: none; z-index:111; position: fixed; left: 0; top:0; text-align: center; font-size: 20px; color: #fff; }
+</style>
+</head>
+<body style="background:#fff">
+	<div id="recommend">
+		<div id="scrollBg"></div>
+		<header class="aui-header-default aui-header-fixed aui-header-clear-bg " style="background:none; border-bottom:0">
+		<!-- <a href="javascript:history.back(-1)" class="aui-header-item">
+			<i class="aui-icon aui-icon-back-white" id="scrollSearchI" style="display:block"></i>	
+			<div id="scrollSearchDiv">
+				<img src="./img/user/head-2.jpg" alt="">
+			</div>
+		</a> -->
+		<div class="aui-header-center aui-header-center-clear">
+			<div class="">
+
+			</div>
+		</div>
+<!-- 		<a href="my-set.html" class="aui-header-item-icon">
+			<i class="aui-icon aui-icon-Sets"></i>
+		</a> -->
+
+	</header>
+
+	<section class="aui-me-content" style="padding-top:0;">
+		<div class="aui-me-content-box" id="myInfo">
+			<!--<div class="aui-me-content-info"></div> 弧度背景 临时 注释  -->
+			<div class="aui-me-content-list">
+				<div class="aui-me-content-item">
+					<div class="aui-me-content-item-head">
+						<div class="aui-me-content-item-img">
+							<img :src="avatar==''?'./img/user/head-2.jpg':avatar" alt="头像" v-if="name?true:false">
+							<i class="iconfont icon-weidenglutouxiang" style="font-size: 60px;color: #666" v-if="name?false:true"></i>
+						</div>
+						<div class="aui-me-content-item-title">
+							<a href="./login.html" v-if="name?false:true" style="font-size: .8rem">登录 / 注册</a>
+							<a href="#" v-else style="font-size: .8rem" v-cloak>{{name}}</a>
+						</div>
+					</div>
+				</div>
+<!-- 				<div class="aui-me-content-card">
+					<h3><i class="aui-icon aui-card-me"></i>分销会员</h3>
+					<a href="my-membership.html">开通享8大权益</a>
+				</div> -->
+			</div>
+		</div>
+
+		<div class="aui-me-content-order">
+			<a href="my-order.html#all" class="aui-well aui-fl-arrow">
+				<div class="aui-well-bd">我的订单</div>
+				<div class="aui-well-ft">查看全部</div>
+			</a>
+		</div>
+		<section class="aui-grid-content">
+			<div class="aui-grid-row my-grid-row">
+				<a href="my-order.html#paying" class="aui-grid-row-item">
+					<i class="aui-icon-large aui-icon-large-sm aui-icon-wallet"></i>
+					<p class="aui-grid-row-label">待付款</p>
+				</a>
+				<a href="my-order.html#backOrder" class="aui-grid-row-item">
+					<i class="aui-icon-large aui-icon-large-sm aui-icon-goods"></i>
+					<p class="aui-grid-row-label">待发货</p>
+				</a>
+				<a href="my-order.html#waitReceiving" class="aui-grid-row-item">
+					<i class="aui-icon-large aui-icon-large-sm aui-icon-receipt"></i>
+					<p class="aui-grid-row-label">待收货</p>
+				</a>
+				<a href="void:javascript()" class="aui-grid-row-item">
+					<i class="aui-icon-large aui-icon-large-sm aui-icon-evaluate"></i>
+					<p class="aui-grid-row-label">待评价</p>
+				</a>
+			</div>
+			<div class="aui-dri"></div>
+			<div class="aui-grid-row my-grid-row">
+				<a href="./my-addres.html" class="aui-grid-row-item">
+					<i class="aui-icon-large aui-icon-large-sm aui-icon-invitation"></i>
+					<p class="aui-grid-row-label">收货地址</p>
+				</a>
+				<a href="./center/index.html" class="aui-grid-row-item" v-if="userInfo.dist_user_id==0?false:true">
+					<i class="aui-icon-large aui-icon-large-sm aui-icon-signs"></i>
+					<p class="aui-grid-row-label">分销中心</p>
+				</a>
+				<a href="./server/index.html" class="aui-grid-row-item">
+					<i class="aui-icon-large aui-icon-large-sm aui-icon-coupon"></i>
+					<p class="aui-grid-row-label">预约服务</p>
+				</a>
+				<a href="./help.html" class="aui-grid-row-item">
+					<i class="aui-icon-large aui-icon-large-sm aui-icon-fight"></i>
+					<p class="aui-grid-row-label">我的帮助</p>
+				</a>
+			</div>
+
+		</section>
+	</section>
+
+	<footer class="aui-footer-default aui-footer-fixed">
+		<a href="index.html" class="aui-footer-item">
+			<span class="aui-footer-item-icon aui-icon aui-footer-icon-home"></span>
+			<span class="aui-footer-item-text">首页</span>
+		</a>
+		<a href="class.html" class="aui-footer-item">
+			<span class="aui-footer-item-icon aui-icon aui-footer-icon-class"></span>
+			<span class="aui-footer-item-text">分类</span>
+		</a>
+		<a href="car.html" class="aui-footer-item">
+			<span class="aui-footer-item-icon aui-icon aui-footer-icon-car"></span>
+			<span class="aui-footer-item-text">购物车</span>
+		</a>
+		<a href="javascript:void(0)" class="aui-footer-item aui-footer-active">
+			<span class="aui-footer-item-icon aui-icon aui-footer-icon-me"></span>
+			<span class="aui-footer-item-text">我的</span>
+		</a>
+	</footer>
+</div>
+<script type="text/javascript" src="./js/vue.js"></script>
+<script type="text/javascript" src="./js/vue-resource.js"></script>
+<script type="text/javascript" src="./js/siteinfo.js"></script>
+<script type="text/javascript" src="./js/component.js"></script>
+<script type="text/javascript" src="./js/me.js"></script>
+</body>
+</html>

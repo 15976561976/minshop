@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui"/>
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+	<meta name="format-detection" content="telephone=no, email=no"/>
+	<meta charset="UTF-8">
+	<title>注册</title>
+	<link rel="stylesheet" href="./css/core.css">
+	<link rel="stylesheet" type="text/css" href="./css/iconfont.css">
+	<link rel="stylesheet" type="text/css" href="./css/login.css">
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+	<link href="iTunesArtwork@2x.png" sizes="114x114" rel="apple-touch-icon-precomposed">
+	<script type="text/javascript" src="./js/vue.js"></script>
+	
+</head>
+<body>
+
+	<header>
+		<a href="./login.html" class="yh-login-gohome">
+			<i class="iconfont icon-x"></i>
+		</a>
+	</header>
+	<form id="yh-register" @submit.prevent="submit">
+		<div class="yh-login-form" >
+			<input type="text" name="user" class="yh-login-inp yh-login-user" placeholder="手机号码" v-model.number="phone" >
+			<input type="password" name="pw" class="yh-login-inp yh-login-pw" placeholder="密码" v-model="pw">
+			<button type="submit" class="yh-login-submit" >注册</button>
+		</div>
+		<div class="yh-login-error" v-show="tips">
+			<p v-cloak>{{msg}}</p> 
+		</div>
+	</form>
+	
+	<script type="text/javascript" src="./js/vue-resource.js"></script>
+	<script type="text/javascript" src="js/siteinfo.js"></script>
+	<script type="text/javascript" src="./js/register.js"></script>
+	
+</body>
+</html>

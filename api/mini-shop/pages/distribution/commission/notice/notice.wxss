@@ -1,0 +1,11 @@
+/* pages/distribution/commission/notice/notice.wxss */
+.title {
+  margin: 0 auto;
+  text-align: center;
+  margin: 10rpx 0 0 0;
+}
+.content {
+  margin: 20rpx 30rpx;
+  text-indent: 2em;
+  font-size: 28rpx;
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui"/>
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+	<meta name="format-detection" content="telephone=no, email=no"/>
+	<meta charset="UTF-8">
+	<title>我的订单</title>
+	<link rel="stylesheet" href="./css/core.css">
+	<link rel="stylesheet" href="./css/icon.css">
+	<link rel="stylesheet" href="./css/order-detail.css">
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+	<link href="iTunesArtwork@2x.png" sizes="114x114" rel="apple-touch-icon-precomposed">
+
+</head>
+<body>
+	<div id="order-detail">
+		<header>
+			<div class="addr">
+				<p>
+					<span class="addr-name">{{addr.name}}</span>
+					<span class="addr-phone">{{addr.phone}}</span>
+				</p>
+				<p class="addr-area">
+					<span>{{addr.province}}</span>
+					<span>{{addr.city}}</span>
+					<span>{{addr.region}}</span>
+					<span>{{addr.detial}}</span>
+				</p>
+			</div>
+		</header>
+		<div class="order">
+			<section class="orderInfo">
+				<div class="orderInfo-bar1">
+					<p>
+						<span>商品列表</span>
+						<span class="orderInfo-bar1-state">{{order.state}}</span>
+					</p>
+				</div>
+				<div class="orderInfo-bar2">
+					<p>
+						<span>订单号：{{order.orderNum}}</span>
+						<span class="orderInfo-bar2-date">{{order.orderDate}}</span>
+					</p>			
+				</div>
+				
+				<div class="proInfo" v-for="(pro, ind) in order.list" :key="ind">
+					<div class="orderInfo-proImg">
+						<img :src="pro.imgUrl">
+					</div>
+					<div class="proInfo-detail">
+						<p class="proInfo-title">{{pro.proName}}</p>
+						<p>
+							<span>¥</span>
+							<span class="proInfo-num">{{pro.proNum}}</span>
+							<span class="proInfo-count">x {{pro.proCount}}</span>
+						</p>
+					</div>
+				</div>
+				<div style="clear:both"></div>
+				<div class="orderInfo-total-wrap">
+					<p class="orderInfo-total">共{{order.totalCount}}件商品，合计：{{order.totalNum}}</p>
+				</div>
+			</section>
+			<div style="clear:both"></div>
+			<section class="totalInfo">
+				<p class="totalInfo-title">订单金额</p>
+				<p class="totalInfo-list">
+					<span>商品金额</span>
+					<span class="totalInfo-num">¥1</span>
+				</p>
+				<p class="totalInfo-list">
+					<span>配送费用</span>
+					<span class="totalInfo-num">¥1</span>
+				</p>
+				<p class="totalInfo-list">
+					<span>应付金额</span>
+					<span class="totalInfo-num">¥1</span>
+				</p>
+			</section>
+		</div>
+		<footer class="bottom-btn">
+			<div>
+				<a href="#">
+					<div class="bottom-btn-left">取消订单</div>
+				</a>
+				<a href="#">
+					<div class="bottom-btn-right">去付款</div>
+				</a>
+			</div>
+		<!-- 	<div>
+				<a href="#">确认收货</a>
+			</div> -->
+		</footer>
+	</div>
+
+
+
+	<script type="text/javascript" src="./js/vue.js"></script>
+	<script type="text/javascript" src="./js/vue-resource.js"></script>
+	<script type="text/javascript" src="./js/siteinfo.js"></script>
+	<script type="text/javascript" src="./js/order-detail.js"></script>
+</body>
+</html>

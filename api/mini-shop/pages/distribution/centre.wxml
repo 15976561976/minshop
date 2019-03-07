@@ -1,0 +1,39 @@
+<!--pages/distribution/centre.wxml-->
+<view class="header">
+	<view class="user">
+		<view class="portrait">
+      <image class="avatar" src="{{userInfo.avatar}}"></image>
+    </view>
+		<view class="message">
+			<text>{{userInfo.name}}</text>
+			<view>分销会员</view>
+		</view>
+	</view>
+	<view class="money">
+		<view class="number">
+			<view>可提现佣金：<span>{{baseAmount.withdrawing_amount}}</span>元</view>
+		</view>
+		<navigator url="drawmoney/drawmoney" class="deposit on">提现</navigator>
+	</view>
+</view>
+<view class="reap">
+	<view class="li">
+		<text class="title">已提现佣金</text>
+		<view class="number"><span>{{baseAmount.withdrawed_amount}}</span>元</view>
+	</view>
+	<view class="li">
+			<text class="title">未结算佣金</text>
+			<view class="number"><span>{{baseAmount.unsettled_amount}}</span>元</view>
+	</view>
+</view>
+<view class="piece">
+	<navigator 
+	url="{{item.url}}" 
+	class="list" 
+	wx:for="{{piece}}" 
+	wx:for-index="index" 
+	wx:key="index">
+		<view class="iconfont {{item.icon}}"></view>
+		<text>{{item.name}}</text>
+	</navigator>
+</view>

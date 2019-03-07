@@ -1,0 +1,8 @@
+{
+  "usingComponents": {},
+  "enablePullDownRefresh": true,
+  "navigationBarTitleText": "选服务类型",
+	"navigationBarBackgroundColor":"#fff",
+	"navigationBarTextStyle":"black" ,
+	"backgroundColor":"#ffffff"
+}

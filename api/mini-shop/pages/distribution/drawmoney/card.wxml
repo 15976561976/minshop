@@ -1,0 +1,12 @@
+<!--pages/distribution/drawmoney/card.wxml-->
+<text class="title">请绑定持卡人本人的银行卡</text>
+<form bindsubmit="saveData">
+	<view class="name">
+		<label>持卡人</label><input name="bank_card_name" type="text" placeholder="请输入姓名"/>
+		<span bindtap="remind" class="iconfont icon-gantanhao"></span>
+	</view>
+	<view class="number">
+		<label>卡号</label><input name="bank_card_num" placeholder="请输入银行卡" maxlength="19" type="number" focus="true" />
+	</view>
+	<button form-type="submit" disabled="{{disabled}}">添加</button>
+</form>

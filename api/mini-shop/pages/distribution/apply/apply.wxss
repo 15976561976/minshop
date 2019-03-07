@@ -1,0 +1,77 @@
+/* pages/distribution/apply/apply.wxss */
+.welcome{
+	font-size: 30rpx;
+	line-height: 120rpx;
+	padding: 0rpx 26rpx;
+	box-sizing: border-box;
+	color: #333;
+}
+.welcome span{
+	color: #ff2525;
+}
+.list{
+	width: 100%;
+	height: auto;
+	margin-bottom: 42rpx;
+	padding: 0rpx 26rpx;
+	box-sizing: border-box;
+	line-height: 80rpx;
+	font-size: 30rpx;
+	color: #333;
+	display: flex;
+	justify-content: space-between;
+}
+.list label{
+	width: 20%;
+}
+.list input{
+	width: 80%;
+	height: 80rpx;
+	background: #fff;
+	border-radius: 10rpx;
+	overflow: hidden;
+	padding: 0rpx 10rpx;
+}
+.clause{
+	width: 100%;
+	height: auto;
+	line-height: 70rpx;
+	text-align: center;
+	font-size: 30rpx;
+}
+.clause icon{
+	display: inline-block;
+	vertical-align: middle;
+	width: 40rpx;
+	height: 40rpx;
+	margin-right: 10rpx;
+	margin-top: -4rpx;
+	
+}
+.clause span{
+	color: #3e316a;
+}
+button{
+	width: 400rpx;
+	height: 80rpx;
+	background: #8eaefd;
+	font-size: 30rpx;
+	color: #fff;
+	line-height: 80rpx;
+	margin-top: 10rpx;
+}
+.alert{
+	position: fixed;
+	width: 500rpx;
+	heihgt:50rpx;
+	border-radius: 25rpx;
+	line-height: 50rpx;
+	text-align: center;
+	font-size: 30rpx;
+	background: #000;
+	opacity: 0.8;
+	color: #fff;
+	left: 50%;
+	top: 70%;
+	margin-left: -250rpx;
+}

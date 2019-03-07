@@ -1,0 +1,149 @@
+/* pages/distribution/drawmoney/card.wxss */
+body{
+	background:#f8f8f8 ;
+}
+.title{
+	font-size: 1.09rem;
+	line-height: 2.9rem;
+	color: #333;
+	text-indent: 1.32rem;
+	display: block;
+}
+form{
+	display: block;
+	width: 100%;
+	height: auto;
+}
+form .name,.number{
+	height: 2.64rem;
+	background: #fff;
+	padding: 0rem 0.92rem;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-between;
+	font-size: 1.02rem;
+	line-height: 2.57rem;
+}
+form label{
+	width: 20%;
+	height: auto;
+	color: #000;
+}
+.name input{
+	width: 60%;
+	height: 2.57rem;
+	color: #666;
+	border:none;
+}
+.name .iconfont{
+	font-size: 1.36rem;
+	text-align: right;
+	display: inline-block;
+	width: 20%;
+	color: #8eaefd;
+}
+.number input{
+	width: 80%;
+	color: #666;
+	height: 2.57rem;
+	border:none;
+}
+.phone input{
+	width: 60%;
+	height: 2.57rem;
+	color: #666;
+	border:none;
+}
+.phone .iconfont{
+	font-size: 1.36rem;
+	text-align: right;
+	display: inline-block;
+	width: 20%;
+	color: #8eaefd;	
+}
+.code input{
+	width: 50%;
+	color: #666;
+	height: 2.57rem;
+	border:none;
+}
+button{
+	font-size: 1.09rem;
+	width: 94%;
+	background: #8eaefd;
+	color: #fff;
+	border:none;
+	text-align: center;
+	display: block;
+	margin: 1rem auto;
+	line-height: 2.57rem;
+	border-radius: 0.3rem;
+}
+
+.visitBg{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	opacity: 0.5;
+	top: 0;
+	z-index: 998;
+}
+.visit{
+	position: fixed;
+	width: 70%;
+	height: auto;
+	text-align: center;
+	background: #fff;
+	z-index: 999;
+	top: 60%;
+	left: 50%;
+	margin: -35%;
+	border-radius: 0.3rem;
+}
+.visit h3{
+	line-height: 3rem;
+	font-size: 1rem;
+}
+.visit p{
+	line-height: 1rem;
+	font-size: 0.8rem;
+	color: #666;
+	padding: 0 1.1rem  0.8rem 1.1rem;
+	border-bottom: 0.06rem solid #ddd;
+	color: #999;
+}
+.visit .select{
+	display: flex;
+	justify-content: space-between;
+}
+.visit .confirm{
+	display: inline-block;
+	width: 100%;
+	line-height: 3rem;
+	font-size: 1.2rem;
+	color: #54cc3b;
+}
+.success{
+	width: 30%;
+	height: auto;
+	background: #000;
+	opacity: 0.5;
+	position: fixed;
+	top: 40%;
+	left: 50%;
+	margin-left: -15%;
+	color: #fff;
+	display: inline-block;
+	text-align: center;
+	border-radius: 0.3rem;
+}
+.success .iconfont{
+	
+	font-size: 5rem;
+}
+.success p{
+	color: #fff;
+	text-align: center;
+	padding-bottom: 1rem;
+}

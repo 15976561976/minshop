@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no, email=no" />
+		<meta charset="UTF-8">
+		<title>誉衡商城</title>
+		<link rel="stylesheet" href="./css/core.css">
+		<link rel="stylesheet" href="./css/icon.css">
+		<link rel="stylesheet" href="./css/home.css">
+		<link rel="icon" type="image/x-icon" href="favicon.ico">
+		<link href="iTunesArtwork@2x.png" sizes="114x114" rel="apple-touch-icon-precomposed">
+	</head>
+	<body>
+
+		<header class="aui-header-default aui-header-fixed ">
+			<!-- 		<a href="javascript:history.back(-1)" class="aui-header-item">
+			<i class="aui-icon aui-icon-back"></i>
+		</a> -->
+			<div class="aui-header-center aui-header-center-clear" style="margin: 0 5%">
+				<div class="aui-header-search-box">
+					<i class="aui-icon aui-icon-small-search"></i>
+					<a href="./search.html">
+						<input id="" type="text" placeholder="iphone8 手机钢化膜" class="aui-header-search">
+					</a>
+				</div>
+			</div>
+		</header>
+		<section class="aui-scroll-contents">
+			<div class="aui-scroll-box" data-ydui-scrolltab id="class">
+				<div class="aui-scroll-nav" id="left-nav">
+					<div href="#" :class="['aui-scroll-item', index==ind?'aui-crt':'']" v-for="(li,ind) in classlist" @click="selectClass(ind)"> 
+						<div class="aui-scroll-item-icon"></div>
+						<div class="aui-scroll-item-text" v-cloak>{{li.name}}</div>
+					</div>
+				</div>
+
+				<div class="aui-scroll-content">
+					<div class="aui-scroll-content-item">
+						<h2 class="aui-scroll-content-title" v-cloak>{{title}}</h2>
+
+						<section class="aui-grid-content">
+							<div class="aui-grid-row aui-grid-row-clear">
+								<div class="aui-grid-row-item" v-for="(item,i) in classlist[index].child" @click="ToList($event, item)">
+									<i class="aui-icon-large aui-icon-sign"><img :src="item.image.file_path" alt=""></i>
+									<p class="aui-grid-row-label" v-cloak>{{item.name}}</p>
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer class="aui-footer-default aui-footer-fixed">
+			<a href="index.html" class="aui-footer-item ">
+				<span class="aui-footer-item-icon aui-icon aui-footer-icon-home"></span>
+				<span class="aui-footer-item-text">首页</span>
+			</a>
+			<a class="aui-footer-item aui-footer-active">
+				<span class="aui-footer-item-icon aui-icon aui-footer-icon-class"></span>
+				<span class="aui-footer-item-text">分类</span>
+			</a>
+			<a href="car.html" class="aui-footer-item">
+				<span class="aui-footer-item-icon aui-icon aui-footer-icon-car"></span>
+				<span class="aui-footer-item-text">购物车</span>
+			</a>
+			<a href="me.html" class="aui-footer-item">
+				<span class="aui-footer-item-icon aui-icon aui-footer-icon-me"></span>
+				<span class="aui-footer-item-text">我的</span>
+			</a>
+		</footer>
+
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script type="text/javascript" src="./js/vue.js"></script>
+	<script type="text/javascript" src="./js/siteinfo.js"></script>
+		<script type="text/javascript" src="js/vue-resource.js"></script>
+		<script type="text/javascript" src="./js/class.js"></script>
+	</body>
+</html>

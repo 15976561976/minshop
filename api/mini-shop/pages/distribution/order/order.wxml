@@ -1,0 +1,29 @@
+<!--pages/distribution/order/order.wxml-->
+<view class="container">
+ <view class="nav">
+  <view wx:for="{{options}}" wx:for-item="item" wx:for-index="i" wx:key="idx">
+    <view class="nav-item {{i == index ?'nav-item-active':''}}" bindtap="onSwitch" id="{{item.id}}" data-index="{{i}}">
+      <text>{{item.title}}</text>
+    </view>
+  </view>
+ </view>
+ <view class="orders">
+    <view class="orders-item" wx:for="{{items}}" wx:for-item="item" wx:key="index">
+      <view class="container-img">
+        <image class="product-img" src="{{rootapi}}{{item.file_name}}"></image>
+      </view>
+      <view class="product-info">
+        <view class="title">
+          <text class="title-text">{{item.goods_name}}</text>
+        </view>
+        <view class="profit">
+          <text class="profit-percent">佣金比例：{{item.discount}}%</text>
+          <text class="my-profit">预计收益：{{item.total_price*(item.discount/100)}}</text>
+        </view>
+      </view>
+    </view>
+ </view>
+ <view class="nomore">
+  <text class="nomore-text">{{more}}</text>
+ </view>
+</view>

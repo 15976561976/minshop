@@ -1,0 +1,5 @@
+<!--pages/distribution/push/push.wxml-->
+<view>
+	<canvas canvas-id='customCanvas' style="width:{{screenWidth+'px'}}; height:{{screenHeight+'px'}}" ontap="onLongTouch"></canvas>
+</view>
+<!-- <button class="save" bindtap="save" >点击保存图片</button> -->

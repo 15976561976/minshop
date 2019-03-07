@@ -1,0 +1,54 @@
+<!--pages/reserve/time/time.wxml-->
+<view class="head">
+	<view class="basic">
+			<view class="img">
+				<image mode="aspectFill" src="{{worker.avatar.file_path}}"></image>
+			</view>
+			<view class="cont">
+				<text class="name">{{worker.worker_name}}</text>
+				<text class="post">{{worker.level}}</text>
+			</view>
+	</view>
+	
+	<view class="describe">
+		<text>{{worker.describe}}</text>
+	</view>
+</view>
+<view class="main">
+	<view class="date">
+		<view class="{{yesterday?null :'prevDay'}}" bindtap="prevDay">
+			<span class="iconfont icon-zuo"></span>
+		</view>
+		<text>{{currentDay}}{{week}}</text>
+		<view bindtap="nextDay">
+			<span class="iconfont icon-xiangyoujiantou"></span>
+		</view>
+	</view>
+	<view wx:if="{{list.length >=1? true : false}}">
+		<navigator 
+		hover-class="none" 
+		url="{{item.booking_num > 0? '../message/message':null}}" 
+		bindtap="getTime"
+		data-item="{{index}}"
+		data-time="{{item.time_line}}"
+		wx:for="{{list}}"  
+		wx:key="index" 
+		class="list">
+			<view class="{{item.booking_num == 0? 'time':'notime'}}">{{item.time_line}}</view>
+			
+			<view wx:if="{{item.booking_num !== 0}}" class="surplus">
+				剩余<text class="current">{{item.booking_num}}</text>个位
+			</view>
+			
+			<text wx:if="{{item.booking_num == 0}}">已满</text>
+			
+			<view class="nofull" wx:else>
+				<text>可预约</text>
+				<span class="iconfont icon-xiangyoujiantou"></span>
+			</view>
+		</navigator>
+	</view>
+	<view class="noTime" wx:else class="noTime">
+		当前时间暂无排班，请您选择其它技师预约！
+	</view>
+</view>

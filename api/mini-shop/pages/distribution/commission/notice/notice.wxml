@@ -1,0 +1,9 @@
+<!--pages/distribution/commission/notice/notice.wxml-->
+<view class="container">
+  <view class="title">
+    <text class="title">{{title}}</text>
+  </view>
+  <view class="content">
+    <text>{{content}}</text>
+  </view>
+</view>

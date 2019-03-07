@@ -1,0 +1,142 @@
+/* pages/distribution/drawmoney/drawmoney.wxss */
+.header{
+	width: 100%;
+	height: 200rpx;
+	background: #8eaefd;
+}
+form{
+	width: 100%;
+	height: auto;
+	padding: 0rpx 30rpx;
+	box-sizing: border-box;
+	margin-top: -56rpx;
+	position: absolute;
+}
+form .money,.way{
+	width: 700rpx;
+	height: auto;
+	background: #FFFFFF;
+	border-radius: 10rpx;
+	box-shadow: 0rpx 0rpx 10rpx #999;
+	line-height: 90rpx;
+	font-size: 28rpx;
+	color: #333;
+	padding: 0rpx 32rpx;
+	box-sizing: border-box;
+}
+form .money .li{
+	width: 636rpx;
+	border-radius: 2rpx #999 solid;
+	display: flex;
+	justify-content: space-between;
+}
+form .money input{
+	width: 480rpx;
+	height: 90rpx;
+	line-height: 90rpx;
+}
+form .money .li view{
+	color: #f7423e;
+	font-size: 32rpx;
+}
+form .money .li view span{
+	font-size: 22rpx;
+}
+.few{
+	font-size: 22rpx;
+	line-height: 76rpx;
+	text-align: right;
+	color: #999;
+}
+form .way .select,.add{
+	display: flex;
+	justify-content: space-between;
+}
+form .way .iconfont{
+	font-size: 30rpx;
+}
+form .way .icon-nongyeyinhang{
+	font-size: 36rpx;
+	color: #1b765d;
+}
+form button{
+	width: 30%;
+	height: 76rpx;
+	border-radius: 38rpx;
+	background: #8eaefd;
+	margin-top: 46rpx;
+	color: #fff;
+	font-size: 32rpx;
+	line-height: 76rpx;
+}
+.option{
+	width: 100%;
+	height: auto;
+	max-height: 700rpx;
+	background: #FFFFFF;
+	padding-bottom: 30rpx;
+	position: fixed;
+	bottom: -700rpx;
+	z-index: 2;
+	transition: 0.2s;
+}
+.optionOn{
+	bottom: 0rpx;
+}
+.option .title{
+	position: relative;
+	text-align: center;	
+	border-bottom: 2rpx solid #DDDDDD;
+}
+.option .title text{
+	font-size: 36rpx;
+	color: #000;
+	line-height: 130rpx;
+}
+.option .title .iconfont{
+	font-size: 36rpx;
+	position: absolute;
+	color: #999;
+	right: 32rpx;
+	top: 32rpx;
+}
+.option .li{
+	width: 100%;
+	height: auto;
+	display: flex;
+	font-size: 30rpx;
+	line-height: 100rpx;
+	justify-content: flex-end;
+	margin-top: -2rpx;
+}
+.option .li span{
+	width: 10%;
+	text-align: center;
+}
+.option .li view{
+	border-top: 2rpx solid #DDDDDD;
+	width: 100%;
+	height: auto;
+}
+.option .li .delCard{
+	right: 30rpx;
+	position: absolute;
+}
+.option .li .add{
+	border-top: 2rpx solid #DDDDDD;
+	width: 90%;
+}
+.bg{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: 1;
+	background: #000000;
+	opacity: 0.4;
+	transition: 0.2s;
+	visibility: hidden;
+	top: 0;
+}
+.bgOn{
+	visibility: visible;
+}

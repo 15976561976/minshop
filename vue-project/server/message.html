@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no, email=no" />
+		<meta charset="UTF-8">
+		<title>预约服务</title>
+		<link rel="stylesheet" href="../css/core.css">
+		<link rel="stylesheet" type="text/css" href="./css/message.css">
+		<link rel="stylesheet" type="text/css" href="../center/css/iconfont/iconfont.css">
+		<link rel="icon" type="image/x-icon" href="favicon.ico">
+		<link href="iTunesArtwork@2x.png" sizes="114x114" rel="apple-touch-icon-precomposed">
+	</head>
+	<body>
+		<div id="message">
+			<div class="head">
+				<div class="list">
+					<span>服务类型</span>
+					<span>{{worker.type.name}}</span>
+				</div>
+				<div class="list">
+					<span>技师</span>
+					<span>{{worker.worker_name}}</span>
+				</div>
+				<div class="list">
+					<span>预约时间</span>
+					<span>{{worker.booking_time}}</span>
+				</div>
+			</div>
+			<span class="title">选择赴约人</span>
+			<div class="select">
+				<div v-if="selectLi.length < 1">
+					<span class="hint">您还没有添加赴约人，请添加</span>
+				</div>
+				<div v-else-if="selectLi.length == 1" @click="toOption" class="name">
+					<span>{{selectLi[defaultcard].username}}</span>
+				</div>
+				<div v-else @click="toOption" class="name">
+					<span>{{selectLi[defaultcard].username}}</span>
+					<span class="iconfont icon-qianjin"></span>
+				</div>
+
+				<a href="add.html" class="add">
+					<span class="iconfont icon-xianshi_tianjiatianchong"></span>
+					添加赴约人
+				</a>
+			</div>
+				<button @click="submit">确定预约</button>
+
+
+			<!-- 选择赴约人 -->
+			<div @click="hide" class="bg" :class="option? 'bgOn':null"></div>
+			<div class="option" :class="option? 'optionOn':null">
+				<div class="title">
+					<span>选择赴约人</span>
+					<span @click="hide" class="iconfont icon-guanbi"></span>
+				</div>
+				<div v-for="(item,i) in selectLi" class="li" @click="selectCard(i)">
+					<div>{{item.username}}</div>
+					<span class="delCard" @click.stop :sendData="i" @click="delCard(item)" >移除</span>
+				</div>
+			</div>
+			
+				
+				<div v-if="visit" class="visitBg"></div>
+				<div v-if="visit" class="visit">
+					<h3>友情提示</h3>
+					<p>请选择是否确认移除银行卡</p>
+					<div class="select">
+						<span @click="conSelect($event)" @click.stop>取消</span>
+						<span @click="conSelect($event)" @click.stop class="confirm">确定</span>
+					</div>
+				</div>
+			
+				<div v-if="success" class="success">
+					<span class="iconfont icon-success_no_circle"></span>
+					<p>提交成功</p>
+				</div>
+				<div v-if="failed" class="success">
+					<p>对不起，当前时间段预约已满，请另选其他时间段预约！</p>
+				</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="../js/vue.js"></script>
+	<script type="text/javascript" src="../js/siteinfo.js"></script>
+	<script type="text/javascript" src="../js/vue-resource.js"></script>
+	<script type="text/javascript" src="js/yyyy-mm-dd.js"></script>
+	<script type="text/javascript" src="js/message.js"></script>
+</html>

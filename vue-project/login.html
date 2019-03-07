@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui"/>
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+	<meta name="format-detection" content="telephone=no, email=no"/>
+	<meta charset="UTF-8">
+	<title>个人中心</title>
+	<link rel="stylesheet" href="./css/core.css">
+	<link rel="stylesheet" type="text/css" href="./css/iconfont.css">
+	<link rel="stylesheet" type="text/css" href="./css/login.css">
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+	<link href="iTunesArtwork@2x.png" sizes="114x114" rel="apple-touch-icon-precomposed">
+	<script type="text/javascript" src="./js/vue.js"></script>
+</head>
+
+<body>
+	<header class="yh-login-header">
+		<a href="./index.html" class="yh-login-gohome">
+			<i class="iconfont icon-x"></i>
+		</a>
+	</header>
+	<form id="yh-login" @submit.prevent = "submit">
+		<div class="yh-login-img">
+			<img src="./img/login/login-img.png" alt="登录" class="yh-login-img">
+		</div>
+		<div class="yh-login-form">
+			<input type="text" name="user" class="yh-login-inp yh-login-user" placeholder="用户名" v-model.number="phone">
+			<input type="password" name="pw" class="yh-login-inp yh-login-pw" placeholder="密码" v-model="pw">
+			<button type="submit" class="yh-login-submit" >登录</button>
+		</div>
+		<div class="bottom">
+			<a href=""	class="yh-login-forget">
+				忘记密码
+			</a>
+			<a href="./register.html" class="yh-login-register">
+				新用户注册
+			</a>
+		</div>
+
+		<div class="yh-login-error" v-show="tips">
+			<p v-cloak>{{msg}}</p>
+		</div>
+	</form>
+	<script type="text/javascript" src="./js/vue-resource.js"></script>
+	<script type="text/javascript" src="./js/siteinfo.js"></script>
+	<script type="text/javascript" src="./js/login.js"></script>
+</body>
+</html>

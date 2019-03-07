@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui"/>
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+	<meta name="format-detection" content="telephone=no, email=no"/>
+	<meta charset="UTF-8">
+	<title>新建地址</title>
+	<link rel="stylesheet" href="./css/core.css">
+	<link rel="stylesheet" href="./css/icon.css">
+	<link rel="stylesheet" href="./css/home.css">
+	<link rel="stylesheet" type="text/css" href="./css/iconfont.css">
+	<link rel="stylesheet" type="text/css" href="./css/login.css">
+	<link rel="stylesheet" type="text/css" href="./css/yh-edit-address.css">
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+	<link href="iTunesArtwork@2x.png" sizes="114x114" rel="apple-touch-icon-precomposed">
+	<style>
+	.m-cell {
+		background-color: #FFF;
+		position: relative;
+		z-index: 1;
+		margin-bottom: .35rem;
+		height: 3rem;
+		line-height: 3rem;
+	}
+	/* 有些资料显示需要写，有些显示不需要，但是在编辑器webstorm中该属性不被识别 */
+	::-webkit-input-placeholder {
+		/* WebKit browsers */
+		color: #888;
+	}
+
+	:-moz-placeholder {
+		/* Mozilla Firefox 4 to 18 */
+		color: #888;
+	}
+
+	::-moz-placeholder {
+		/* Mozilla Firefox 19+ */
+		color: #888;
+	}
+
+	:-ms-input-placeholder {
+		/* Internet Explorer 10+ */
+		color: #888;
+	}
+</style>
+
+</head>
+<body style="background:#eee">
+
+	<header class="aui-header-default aui-header-fixed ">
+		<a href="javascript:history.back(-1)" class="aui-header-item">
+			<i class="aui-icon aui-icon-back"></i>
+		</a>
+		<div class="aui-header-center aui-header-center-clear">
+			<div class="aui-header-center-logo">
+				<div class="">新建地址</div>
+			</div>
+		</div>
+<!-- 		<a href="#" class="aui-header-item-icon" style="min-width:0">
+			<i class="aui-icon aui-icon-search"></i>
+		</a> -->
+	</header>
+
+
+	<section id="yh-edit-address" class="aui-myOrder-content">
+		<div class="aui-prompt"><i class="aui-icon aui-prompt-sm"></i>填写您的地址信息</div>
+		<div class="aui-Address-box">
+			<p>
+				<input class="aui-Address-box-input" type="text" placeholder="收货人姓名" v-model="name">
+			</p>
+			<p>
+				<input class="aui-Address-box-input" type="text" placeholder="手机号码" v-model="phone">
+			</p>
+			<p>
+				<input class="aui-Address-box-input" type="text" readonly id="J_Address"  placeholder="所在地区" v-model="area" @click="choice">
+			</p>
+			<p>
+				<textarea class="aui-Address-box-text" placeholder="街道， 小区门牌等详细地址" rows="3"  v-model="addr"></textarea>
+			</p>
+
+		</div>
+		<div class="aui-out">
+			<a href="javascript:void(0)" class="red-color" style="color:#fff" @click="saveAddr">保存并使用</a>
+		</div>
+		<div class="yh-login-error" v-show="saveTips">
+			<p v-cloak>{{msg}}</p>
+		</div>
+		<div class="yh-edit-address-mask" v-show="isChoice"></div>
+		<section class="yh-edit-address-area" v-show="isChoice">
+			<div class="yh-edit-address-area-topbar">
+				<span>配送至</span>
+				<i class="iconfont icon-x yh-edit-address-back" @click="exitChoice"></i>
+			</div>
+			<div class="yh-edit-address-items">
+				<ul>
+					<li class="yh-edit-address-item" v-for="(item,ind) in area" @click="resetArea($event,ind)" v-cloak>{{item}}</li>
+				</ul>
+			</div>
+			<div class="yh-edit-address-lists">
+				<ul class="yh-edit-address-column">
+					<li class="yh-edit-address-column-item" v-for="item in list" @click="myChoice($event, item)" v-cloak>{{item.name}}</li>
+				</ul>
+			</div>
+		</section>
+	</section>
+
+	<script type="text/javascript" src="./js/vue.js"></script>
+	<script type="text/javascript" src="./js/vue-resource.js"></script>
+	<script type="text/javascript" src="./js/siteinfo.js"></script>
+	<script type="text/javascript" src="./js/my-edit-address.js"></script>
+
+
+
+</body>
+</html>

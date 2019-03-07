@@ -1,0 +1,16 @@
+<!--pages/reserve/reserve.wxml-->
+<navigator class="search" url='./search/search'><span class="iconfont icon-sousuo"></span>搜索</navigator>
+<view class="main" style="height: {{screenHeight}}px;">
+	<scroll-view class="nav" scroll-y="true" scroll-left>
+		<view class="{{navOn == item.id? 'navOn':null}}" bindtap="nav" wx:for="{{nav}}" wx:key="idx" wx:index="index" data-item="{{item.id}}">{{item.name}}</view>
+	</scroll-view>
+	<scroll-view class="select" scroll-y="true" scroll-left>
+		<navigator bindtap ="selectType" data-text="{{item.name}}" data-id="{{item.id}}" url="./weekCalendar/schedule" wx:for="{{select}}" wx:key="index">
+			<text>{{item.name}}</text>
+			<span class="iconfont icon-xiangyoujiantou"></span>
+		</navigator>
+	</scroll-view>
+</view>
+<navigator url="./record/record" class="record">
+	<span class="iconfont icon-zhaorenjilu"></span>
+</navigator>

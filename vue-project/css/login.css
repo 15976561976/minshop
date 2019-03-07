@@ -1,0 +1,74 @@
+.yh-login-header {
+	height: 2.4rem;
+}
+.yh-login-gohome {
+	line-height: 2.4rem;
+	margin: 0 .6rem;
+}
+.yh-login-form {
+	height: 15rem;
+	padding: 0 .6rem;
+	text-align: center;
+}
+.yh-login-inp {
+	border: none;
+	height: 3rem;
+	/*background: blue;*/
+	margin: .5rem 0;
+}
+.yh-login-user {
+	width: 100%;
+	border-bottom: 2px solid #f7f7f7;
+}
+.yh-login-pw {
+	width: 100%;
+	border-bottom: 2px solid #f7f7f7;
+}
+.yh-login-nn {
+	width: 100%;
+	border-bottom: 2px solid #f7f7f7;
+}
+.yh-login-submit {
+	width: 90%;
+	height: 3rem;
+	/*background: red;*/
+	border: none;
+	border-radius: 1.5rem;
+	margin-top: 2rem;
+	color: #fff;
+	font-size: 1rem;
+	background: -webkit-linear-gradient(left, #f13232, #ff3232);
+}
+.yh-login-forget {
+	float: left;
+	margin-left: .6rem;
+}
+.yh-login-register {
+	float: right;
+	margin-right: .6rem;
+}
+.yh-login-img {
+	width: 7rem;
+	margin: 0 auto;
+}
+.yh-login-error {
+	width: 10rem;
+	height: 8rem;
+	background: #333;
+	position: absolute;
+	left: 50%;
+	margin: -5rem;
+	top: 50%;
+	opacity: .8;
+	line-height: 8rem;
+	text-align: center;
+	font-size: 1rem;
+	font-weight: bold;
+	color: #fff;
+	border-radius: 1rem;
+}
+.bottom{
+	margin-top: 3rem;
+	width: 100%;
+	height: 1rem;
+}

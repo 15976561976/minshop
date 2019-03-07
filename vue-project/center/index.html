@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui"/>
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+	<meta name="format-detection" content="telephone=no, email=no"/>
+	<meta charset="UTF-8">
+	<title>分销中心</title>
+	<link rel="stylesheet" href="../css/core.css">
+	<link rel="stylesheet" type="text/css" href="./css/center.css">
+	<link rel="stylesheet" type="text/css" href="../css/iconfont.css">
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+	<link href="iTunesArtwork@2x.png" sizes="114x114" rel="apple-touch-icon-precomposed">
+<body>
+	<div id="container">
+		<header class="yh-center-header">
+			<!-- <div class="yh-center-header-top">
+				<a href="../me.html"  class="yh-center-header-back">
+					<i class="iconfont icon-fanhui"></i>
+				</a>
+				<h4 class="yh-center-header-title">分销中心</h4>
+			</div> -->
+			<div>
+				<div class="yh-center-me">
+					<div class="yh-center-avater">
+						<div class="yh-center-avater iconfont icon-weidenglutouxiang" style="font-size: 3.6rem"
+						v-if="userInfo.avatarUrl?false:true"></div>
+						<img :src="userInfo.avatarUrl" alt="头像" class="yh-center-avater"
+						v-if="userInfo.avatarUrl?true:false">
+					</div>
+					<div class="yh-center-me-info">
+						<h4 class="yh-center-me-title" v-cloak>{{userInfo.phone}}</h4>
+						<span class="yh-center-me-comment">分销会员</span>
+					</div>
+				</div>
+				<div class="yh-center-withdraw-cash">
+					<span class="yh-center-withdraw-cash-money" v-cloak>可提现佣金:{{commissionInfo.withdrawing_amount}}元</span>
+					<div class="yh-center-withdraw-cash-btn">
+						<a href="drawmoney.html">提现</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div>
+			<div class="yh-center-commission">
+				<section class="yh-center-commission-info">
+					<h4 class="yh-center-already">已提现佣金</h4>
+					<span class="yh-center-commission-money" v-cloak>{{commissionInfo.withdrawed_amount}}元</span>
+				</section>
+				<section class="yh-center-commission-info">
+					<h4 class="yh-center-not-yet">未结算佣金</h4>
+					<span class="yh-center-commission-money" v-cloak>{{commissionInfo.unsettled_amount}}元</span>
+				</section>
+			</div>
+
+			<div class="yh-center-items">
+				<section class="yh-center-item">
+					<a href="commission.html">
+						<i class="iconfont icon-qiandai yh-center-item-icon" style="color: #ebd200; font-size: 1.5rem"></i>
+						<p class="yh-center-item-title">分销佣金</p>
+					</a>
+				</section>
+				<section class="yh-center-item">
+					<a href="order.html">
+						<i class="iconfont icon-dingdan" style="color: #3bacf2; font-size: 1.5rem"></i>
+						<p class="yh-center-item-title">分销订单</p>
+					</a>
+				</section>
+				<section class="yh-center-item">
+					<a href="careful.html">
+						<i class="iconfont icon-jiekuanmingxichaxun" style="color: #ea3639; font-size: 1.5rem"></i>
+						<p class="yh-center-item-title">提现明细</p>
+					</a>
+				</section>
+				<section class="yh-center-item">
+					<a href="friend.html">
+						<i class="iconfont icon-yaoqinghaoyou" style="color: #84d57b; font-size: 1.5rem"></i>
+						<p class="yh-center-item-title">我的好友</p>
+					</a>
+				</section>
+				<section class="yh-center-item">
+					<a href="push.html">
+						<i class="iconfont icon-erweima" style="color: #e39357; font-size: 1.5rem"></i>
+						<p class="yh-center-item-title">推广二维码</p>
+					</a>
+				</section>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="../js/vue.js"></script>
+	<script type="text/javascript" src="../js/vue-resource.js"></script>
+	<script type="text/javascript" src="../js/siteInfo.js"></script>
+	<script type="text/javascript" src="./js/index.js"></script>
+</body>
+</head>

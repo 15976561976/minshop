@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui"/>
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+	<meta name="format-detection" content="telephone=no, email=no"/>
+	<meta charset="UTF-8">
+	<title>分销佣金</title>
+	<link rel="stylesheet" href="../css/core.css">
+	<link rel="stylesheet" type="text/css" href="css/commission.css">
+	<link rel="stylesheet" type="text/css" href="../css/iconfont.css">
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+	<link href="iTunesArtwork@2x.png" sizes="114x114" rel="apple-touch-icon-precomposed">
+	</head>
+	<body>
+		<div class="container" id="commission">
+		  <div class="top-bar">
+		    <div class="sale">
+		      <span class="sale-text">分销佣金</span>
+		      <div class="sale-total">
+		        <span class="sale-money" v-cloak>{{all_amount}}</span>
+		        <span class="sale-unit"> 元</span>
+		      </div>
+		    </div>
+		    <div class="btn-wrap">
+		      <a href="./careful.html" class="withdrawal-btn">
+		        <span>提现明细</span>
+		      </a>
+		    </div>
+		  </div>
+		  <div class="info">
+		    <div class="item" v-for="(item,i) in items">
+		      <div class="commission">
+		        <span v-cloak>{{item.option}}</span>
+		      </div>
+		      <div class="commission-money">
+		        <span v-cloak>{{item.sideInfo}}</span>
+		      </div>
+		    </div>
+				<a href= '/pages/distribution/commission/notice/notice' class="item">
+					<div class="commission">
+						<span>用户须知</span>
+					</div>
+					<div class="commission-money">
+						<span class="iconfont icon-xiangyoujiantou"></span>
+					</div>
+				</a>
+		  </div>
+		  <div class="want-withdrawal" ontap="onWithdrawal">
+		  	<a href="./drawmoney.html"><span>我要提现</span></a>
+		  </div>
+		</div>	
+
+		<script type="text/javascript" src="../js/vue.js"></script>
+		<script type="text/javascript" src="../js/vue-resource.js"></script>
+		<script type="text/javascript" src="../js/siteInfo.js"></script>
+		<script type="text/javascript" src="./js/commission.js"></script>
+	</body>
+</html>

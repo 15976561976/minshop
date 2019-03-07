@@ -1,0 +1,91 @@
+/* pages/reserve/reserve.wxss */
+.search{
+	width: 710rpx;
+	height: 64rpx;
+	margin: 22rpx auto 0 auto;
+	background: #fff;
+	border-radius: 36rpx;
+	text-align: center;
+	line-height: 64rpx;
+	font-size: 28rpx;
+	color: #999;
+}
+.search span{
+	font-size: 30rpx;
+	margin-right: 10rpx;
+}
+.main {
+	width: 100%;
+	height: auto;
+	display: flex;
+	justify-content: space-between; 
+	background: #fff;
+	line-height: 90rpx;
+	margin: 20rpx auto;
+	overflow: hidden;
+}
+.main .nav{
+	width: 35%;
+	height: auto;
+	background: #f8f8f8;
+	text-align: center;
+	color: #333;
+	font-size: 28rpx;
+}
+.main .navOn{
+	color: #ff4e67;
+	background: #fff;
+	font-size: 30rpx;
+}
+
+.main .select{
+	width: 60%;
+	height: auto;
+	font-size: 28rpx;
+	padding-right: 20rpx;
+	box-sizing: border-box;
+}
+.main .select navigator{
+	display: flex;
+	justify-content: space-between;
+	background: #fff;
+	border-bottom: 2rpx solid #ddd;
+	color: #333;
+	padding: 0 0 0 20rpx;
+	box-sizing: border-box;
+}
+.main .select .iconfont{
+	color: #ddd;
+	font-size: 24rpx;
+}
+.record {
+	width: 80rpx;
+	height: 80rpx;
+	position: fixed;
+	bottom: 200rpx;
+	right: 30rpx;
+	line-height: 80rpx;
+}
+.record:after {
+	width: 80rpx;
+	height: 80rpx;
+	border-radius: 50%;
+	background: #ff4e67;
+	content: " ";
+	display: block;
+	position: absolute;
+	opacity: 0.7;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+.record .iconfont{
+	color: #fff;
+	font-size: 56rpx;
+	text-align: center;
+	position: absolute;
+	top:0;
+	left:0;
+	right: 0;
+	bottom: 0;
+}

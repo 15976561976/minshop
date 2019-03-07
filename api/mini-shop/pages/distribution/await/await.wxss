@@ -1,0 +1,38 @@
+/* pages/distribution/await/await.wxss */
+.container  {
+  background: #f2f2f2;
+}
+.container-img {
+  height: 350rpx;
+  display: flex;
+  align-items: center;
+}
+.wait-img {
+  width: 210rpx;
+  height: 210rpx;
+  margin: 0 auto;
+}
+.thank  {
+  display: flex;
+  align-items: center;
+  margin: 10rpx 0 0 0;
+}
+.thank-text  {
+  margin: 0 auto;
+  font-size: 32rpx;
+  color: #5e5e5e;
+}
+.shopping {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 42rpx auto 0 auto;
+  width: 210rpx;
+  height: 82rpx;
+  background: #ee781e;
+  border-radius: 8rpx;
+}
+.shopping-text {
+  font-size: 30rpx;
+  color: #ffffff;
+}

@@ -1,0 +1,74 @@
+/* pages/distribution/order/order.wxss */
+.nav {
+  height: 3.2rem;
+  background: #ffffff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.nav-item {
+  height: 3.2rem;
+  font-size: 1.02rem;
+  display:flex;
+  align-items: center;
+}
+.nav-item-active {
+  border-bottom: 0.13rem solid #f7423e;
+  box-sizing: border-box;
+}
+.container {
+  padding: 3.2rem 0 0 0;
+}
+.orders-item {
+  height: 7.32rem;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  margin: 0.13rem 0 0 0;
+}
+.product-img {
+  width: 6.1rem;
+  height: 6.1rem;
+  background:  #dcdcdc;
+  margin: 0 0.72rem 0 0.72rem;
+}
+.product-info {
+  display: flex;
+  flex-flow: column wrap; 
+  padding: 0 1.98rem 0 0;
+  box-sizing: border-box;
+  height: 7.32rem;
+}
+.title {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+.profit {
+  display: flex;
+  flex-flow: column wrap;
+  flex: 1;
+  justify-content: center;
+}
+.profit-percent {
+  font-size: 0.72rem;
+  color: #999999;
+}
+.my-profit {
+  font-size: 0.85rem;
+  color: #ec6941;
+  margin: 0.66rem 0 0 0;
+}
+.nomore {
+  margin: 0.85rem 0 0 0;
+  display: flex;
+  justify-content: center;
+}
+.nomore-text {
+  font-size: 0.79rem;
+  color: #999999;
+}

@@ -1,0 +1,24 @@
+<!--pages/distribution/friend/friend.wxml-->
+<view class="container">
+  <view class="top">
+    <text class="total-friend">团队总人数：{{length}}人</text>
+  </view>
+  <view wx:if="true" class="friends" wx:for="{{friends}}" wx:for-item="item" wx:key="indx">
+    <view class="friend">
+      <view class="left">
+        <image class="avatar" src="{{item.user.avatarUrl}}"></image>
+      </view>
+      <view class="center">
+        <text class="friend-name">{{item.user.nickName}}</text>
+        <text class="friend-date">{{item.create_time}}</text>
+      </view>
+      <view class="right">
+        <view class="consume">
+          <!-- <text class="rmb">￥</text>
+          <text class="money">{{item.money}}</text> -->
+        </view>
+      </view>
+    </view>
+  </view>
+	<view class="footer">{{more}}</view>
+</view>

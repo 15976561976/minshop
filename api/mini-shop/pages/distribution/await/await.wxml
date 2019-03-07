@@ -1,0 +1,12 @@
+<!--pages/distribution/await/await.wxml-->
+<view class="container" style="height: {{height}}">
+  <view class="container-img">
+    <image class="wait-img" src="/images/await.png"></image>
+  </view>
+  <view class="thank">
+    <text class="thank-text">谢谢您的支持，请等待审核！</text>
+  </view>
+  <view class="shopping">
+    <text class="shopping-text">去商场逛逛</text>
+  </view>
+</view>

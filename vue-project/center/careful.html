@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui"/>
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+	<meta name="format-detection" content="telephone=no, email=no"/>
+	<meta charset="UTF-8">
+	<title>提现明细</title>
+	<link rel="stylesheet" href="../css/core.css">
+	<link rel="stylesheet" type="text/css" href="css/careful.css">
+	<link rel="stylesheet" type="text/css" href="../css/iconfont.css">
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+	<link href="iTunesArtwork@2x.png" sizes="114x114" rel="apple-touch-icon-precomposed">
+	</head>
+	<body>
+		<div class="container" id="careful">
+			<div class="nav">
+				<div v-for="(item,i) in nav" class="nav-item" :class="active == i?'active':null" @click="navTab(i)" >
+					<span v-cloak>{{item.title}}</span>
+				</div>
+			</div>
+			<div class="main">
+				<div v-for="(item,i) in list" class="list">
+					<div class="date">
+						<span v-cloak>{{item.create_time}}</span>
+					</div>
+					<span class="way" v-cloak>转至{{item.dist_user_id}}</span>
+					<div class="money">
+						<div class="num"><span v-cloak>{{item.withdraw_price}}</span>元</div>
+						<span class="span" :class="item.withdraw_status.status_name !== '已打款'? 'on':null"  v-cloak>{{item.withdraw_status.status_name}}</span>
+					</div>
+				</div>
+			</div>
+			<div class="nomore">
+				<span class="nomore-span" v-cloak>{{more}}</span>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="../js/vue.js"></script>
+	<script type="text/javascript" src="../js/vue-resource.js"></script>
+	<script type="text/javascript" src="../js/siteInfo.js"></script>
+	<script type="text/javascript" src="js/careful.js"></script>
+</html>

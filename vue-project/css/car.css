@@ -1,0 +1,29 @@
+.nogoods{
+	position: absolute;
+	color: #999;
+	width: 100px;
+	top: 30%;
+	left: 50%;
+	margin-left: -50px;
+	text-align: center;
+}
+
+.nogoods .icon-gouwuche{
+	font-size: 100px;
+}
+.del{
+	width: 40px;
+	height: inherit;
+	display: inline-block;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+.carli{
+	margin-bottom: 0 !important;
+	padding-top: 10px;
+}
+.iconfont{
+	font-size: 20px;
+	color: #d4244e;
+}

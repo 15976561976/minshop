@@ -1,0 +1,78 @@
+/* pages/distribution/drawmoney/card.wxss */
+.title{
+	font-size: 32rpx;
+	line-height: 88rpx;
+	color: #333;
+	text-indent: 40rpx;
+	display: block;
+}
+form{
+	display: block;
+	width: 100%;
+	height: auto;
+}
+form .name,.number{
+	height: 80rpx;
+	background: #fff;
+	padding: 0rpx 28rpx;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-between;
+	font-size: 30rpx;
+	line-height: 78rpx;
+}
+form label{
+	width: 20%;
+	height: auto;
+	color: #000;
+}
+.name input{
+	width: 60%;
+	height: 78rpx;
+	color: #666;
+}
+.name .iconfont{
+	font-size: 40rpx;
+	text-align: right;
+	display: inline-block;
+	width: 20%;
+	color: #8eaefd;
+}
+.number input{
+	width: 80%;
+	color: #666;
+	height: 78rpx;
+}
+.phone input{
+	width: 60%;
+	height: 78rpx;
+	color: #666;
+}
+.phone .iconfont{
+	font-size: 40rpx;
+	text-align: right;
+	display: inline-block;
+	width: 20%;
+	color: #8eaefd;	
+}
+.code input{
+	width: 50%;
+	color: #666;
+	height: 78rpx;
+}
+.code button{
+	font-size: 28rpx;
+	text-align: center;
+	display: inline-block;
+	width: 30%;
+	color: #333;
+	line-height: 78rpx;
+	background: #eee;
+}
+button{
+	font-size: 32rpx;
+	width: 700rpx;
+	background: #8eaefd;
+	color: #fff;
+	margin-top: 30rpx;
+}

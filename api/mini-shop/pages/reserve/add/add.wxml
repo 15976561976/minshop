@@ -1,0 +1,12 @@
+<!--pages/distribution/drawmoney/card.wxml-->
+<text class="title">请提交赴约人信息</text>
+<form bindsubmit="saveData">
+	<view class="name">
+		<label>姓名</label><input name="username" type="text" placeholder="请输入姓名"/>
+		<span bindtap="remind" class="iconfont icon-gantanhao"></span>
+	</view>
+	<view class="number">
+		<label>手机号</label><input name="mobile" placeholder="请输入手机号码" maxlength="11" type="number" />
+	</view>
+	<button form-type="submit" disabled="{{disabled}}">添加</button>
+</form>

@@ -1,0 +1,113 @@
+body {
+	background: #f7f7f7;
+}
+.yh-center-header {
+	background: #8dadfd;
+}
+.yh-center-header-top {
+	height: 2.4rem;
+	background: #fff;
+	line-height: 2.4rem;
+	position: relative;
+}
+.yh-center-header-back {
+	position: absolute;
+}
+.yh-center-header-title {
+	font-size: 0.9rem;	
+	text-align: center;
+}
+.yh-center-me {
+	display: flex;
+	align-items: center;
+	height: 5.1rem;
+	margin: 0 .6rem;
+	border-bottom: 2px solid #ddd;
+}
+.yh-center-avater {
+	width: 3.6rem;
+	height: 3.6rem;
+	border-radius: 1.8rem;
+}
+.yh-center-me-info {
+	line-height: 1.6rem;
+	margin-left: 1rem;
+}
+.yh-center-withdraw-cash {
+	height: 3.4rem;
+	margin: 0 .6rem;
+	line-height: 3.4rem;
+}
+.yh-center-withdraw-cash-money {
+	float: left;
+	font-size: .9rem;
+}
+.yh-center-withdraw-cash-btn {
+	float: right;
+	font-size: 1rem;
+	color: #222;
+	width: 4rem;
+	height: 2rem;
+	background: #fff;
+	border-radius: 1rem;
+	text-align: center;
+	line-height: 2rem;
+	margin-top: .7rem;
+}
+.yh-center-commission {
+	height: 5.1rem;
+	background: #fff;
+	display: flex;
+	flex-direction: row;
+}
+.yh-center-commission-info {
+	width: 50%;
+	height: 5.1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	line-height: 2.5rem;
+}
+.yh-center-items {
+	margin-top: .6rem;
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	text-align: center;
+	
+}
+.yh-center-item {
+	width: 33.33%;
+	height:6.2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	float: left;
+	justify-content: center;
+	box-sizing: border-box;
+	background: #fff;
+	border: 1px solid #f7f7f7;
+
+}
+.yh-center-me-title {
+	font-size: 1.2rem;
+}
+.yh-center-me-comment  {
+	font-size: .9rem;
+}
+.yh-center-already {
+	color: #80c269;
+	font-size: .8rem;
+}
+.yh-center-not-yet {
+	color: #f7423e;
+	font-size: .8rem;
+}
+.yh-center-commission-money {
+	font-size: 1.2rem;
+}
+.yh-center-item-title {
+	margin-top: .5rem;
+	font-size: .9rem;
+}

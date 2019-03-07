@@ -1,0 +1,152 @@
+/* pages/reserve/time/time.wxss */
+.head {
+	width: 710rpx;
+	height: auto;
+	margin: 20rpx auto;
+	background: #fff;
+	border-radius: 10rpx;
+	padding: 0rpx 20rpx;
+	box-sizing: border-box;
+}
+.head .basic{
+	width: 100%;
+	height: 160rpx;
+	display: flex;
+	justify-content: flex-start;
+	border-radius: 10rpx;
+	align-items: center;
+	
+}
+.head .describe{
+	width: 100%;
+	padding: 20rpx 0rpx;
+	box-sizing: border-box;
+	border-top: 2rpx solid #ddd;
+	font-size: 28rpx;
+	color: #999;
+}
+
+.head .img {
+	width: 120rpx;
+	height: 120rpx;
+	border-radius: 50%;
+	background: #ff4e67;
+	overflow: hidden;
+	margin-right: 20rpx;
+}
+
+.head .img image {
+	width: 100%;
+	height: 100%;
+}
+
+.head .cont {
+	flex-grow: 1;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.head .cont .name {
+	font-size: 28rpx;
+	color: #000;
+	font-weight: bold;
+}
+
+.head .cont .post {
+	font-size: 22rpx;
+	color: #999;
+	line-height: 40rpx;
+}
+
+.main {
+	width: 710rpx;
+	height: auto;
+	margin: 20rpx auto;
+	background: #fff;
+	border-radius: 10rpx;
+	padding: 0rpx 20rpx;
+	box-sizing: border-box;
+	font-size: 28rpx;
+}
+
+.main .date {
+	width: auto;
+	height: 132rpx;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.main .date .iconfont {
+	font-size: 28rpx;
+}
+
+.date view {
+	width: 82rpx;
+	height: 40rpx;
+	border: 2rpx solid #ff4e67;
+	text-align: center;
+	line-height: 40rpx;
+	border-radius: 6rpx;
+	color: #ff4e67;
+}
+.date .prevDay{
+	border: 2rpx solid #999;
+	color: #999;
+}
+
+.list {
+	width: auto;
+	height: 94rpx;
+	line-height: 94rpx;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 28rpx;
+	border-top: 2rpx solid #ddd;
+}
+
+.list .time {
+	height: 32rpx;
+	padding: 10rpx;
+	background: #dcdcdc;
+	color: #fff;
+	line-height: 32rpx;
+}
+
+.list .notime {
+	height: 32rpx;
+	padding: 10rpx;
+	background: #ff4e67;
+	color: #fff;
+	line-height: 34rpx;
+}
+
+.list text {
+	color: #999;
+}
+
+.list .nofull text {
+	color: #333;
+}
+
+.list .nofull span {
+	float: right;
+	margin-left: 20rpx;
+}
+
+.list .surplus .current {
+	color: #ff4e67;
+	font-weight: bold;
+}
+
+.noTime {
+	width: auto;
+	height: 94rpx;
+	line-height: 94rpx;
+	align-items: center;
+	font-size: 28rpx;
+	border-top: 2rpx solid #ddd;
+	color: #666;
+}

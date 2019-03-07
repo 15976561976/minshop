@@ -1,0 +1,72 @@
+/* pages/distribution/commission/commission.wxss */
+.top-bar  {
+  height: 5.6rem;
+  background: #8eaefd;
+  display: flex;
+  align-items: center;
+}
+.sale {
+  flex: 1;
+  margin: 0 0 0 0.75rem;
+}
+.sale-text {
+  font-size: 1.12rem;
+}
+.sale-total {
+  margin: 0.82rem 0 0 0;
+}
+.sale-money {
+  font-size: 1.32rem;
+}
+.sale-unit {
+  font-size: 0.85rem;
+}
+.btn-wrap {
+  flex: 1;
+  display: flex;
+  flex-flow: row-reverse wrap;
+}
+.withdrawal-btn {
+  width: 4.62rem;
+  height: 2.31rem;
+  margin: 0 0.85rem 0 0;
+  font-size: 0.95rem;
+  color: #333333;
+  background: #fff;
+  border-radius: 0.33rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.item {
+  display: flex;
+  align-items: center;
+  font-size: 1.02rem;
+  background: #fff;
+  height: 3.3rem;
+  box-sizing: border-box;
+  padding: 0 0.79rem;
+  margin: 0 0 0.59rem 0;
+  
+}
+.commission {
+  flex: 1;
+}
+.commission-money {
+  flex: 1;
+  display: flex;
+  flex-flow: row-reverse wrap;
+}
+.want-withdrawal {
+  background: #7ca2ff;
+  width: 22.44rem;
+  height: 3.3rem;
+  border-radius: 0.33rem;
+  margin: 1.32rem auto 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: #fff;
+
+}

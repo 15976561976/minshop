@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no, email=no" />
+		<meta charset="UTF-8">
+		<title>萌宝</title>
+		<link rel="stylesheet" href="./css/core.css">
+		<link rel="stylesheet" href="./css/icon.css">
+		<link rel="stylesheet" href="./css/home.css">
+		<link rel="icon" type="image/x-icon" href="favicon.ico">
+		<link href="iTunesArtwork@2x.png" sizes="114x114" rel="apple-touch-icon-precomposed">
+	</head>
+	<body>
+		<div class="main" id="main">
+			<header class="aui-header-default aui-header-fixed ">
+				<a href="javascript:history.back(-1)" class="aui-header-item">
+					<i class="aui-icon aui-icon-back"></i>
+				</a>
+				<div class="aui-header-center aui-header-center-clear">
+					<div class="aui-header-search-box">
+						<a href="./search.html">
+							<i class="aui-icon aui-icon-small-search"></i>
+							<input id="" type="text" placeholder="搜索" class="aui-header-search">
+						</a>
+					</div>
+					
+				</div>
+			</header>
+			<section class="aui-new-search-content">
+				<div class="aui-new-search-tab">
+					<ul>
+						<li v-for="(item,ind) in nav" @click="switchItem(ind)">
+							<span :class="[index==ind?'aui-active':'']">{{item}}</span>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="aui-list-product">
+				<div class="aui-list-product-float-item">
+					<a href="product.html" @click.prevent="goto(p)" class="aui-list-product-fl-item" v-for="p in proList">
+						<div class="aui-list-product-fl-img">
+							<img :src="p.img" alt="">
+						</div>
+						<div class="aui-list-product-fl-text">
+							<h3 class="aui-list-product-fl-title">{{p.title}}</h3>
+							<div class="aui-list-product-fl-mes">
+								<div>
+									<span class="aui-list-product-item-price">
+										<em>¥</em>
+										{{p.currentPrice}}
+									</span>
+								</div>
+							</div>
+							<div class="aui-list-self-sell">
+								<em class="aui-self-sell-em"></em>
+							</div>
+
+						</div>
+					</a>
+				</div>
+			</section>
+		</div>
+
+		<script type="text/javascript" src="./js/vue.js"></script>
+		<script type="text/javascript" src="./js/vue-resource.js"></script>
+		<script type="text/javascript" src="./js/siteinfo.js"></script>
+		<script type="text/javascript" src="./js/my-products-class.js"></script>
+	</body>
+</html>

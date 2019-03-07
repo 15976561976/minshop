@@ -1,0 +1,65 @@
+/* pages/distribution/friend/friend.wxss */
+.container {
+  background: #f7f7f7;
+}
+.top {
+  height: 65rpx;
+  display: flex;
+  align-items: center;
+}
+.total-friend  {
+  margin: 0 0 0 25rpx;
+  
+  font-size: 32rpx;
+  color: #808080;
+}
+.friend {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  height: 156rpx;
+  padding: 0 32rpx 0 40rpx;
+  margin: 0 0 2rpx 0;
+}
+.left {
+  display: flex;
+  align-items: center;
+  margin: 0 16rpx 0 0;
+}
+.avatar {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 100rpx;  
+  background: #7e6eeb;
+}
+.center {
+  display: flex;
+  flex-direction: column;
+}
+.friend-name {
+  font-size: 32rpx;
+}
+.friend-date {
+  font-size: 21rpx;
+  color: #888;
+  margin: 20rpx 0 0 0;
+}
+
+.right {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: end;
+  flex: 1;
+}
+.rmb {
+  font-size: 24rpx;
+}
+.money {
+  font-size: 32rpx;
+}
+.footer{
+	text-align: center;
+	font-size: 26rpx;
+	color: #999;
+	line-height: 80rpx;
+}

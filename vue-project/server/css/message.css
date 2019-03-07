@@ -1,0 +1,242 @@
+/* pages/reserve/message/message.wxss */
+body{
+	background: #F8F8F8;
+}
+.head{
+	width: 94%;
+	height: auto;
+	background: #fff;
+	border-radius: 0.33rem;
+	overflow: hidden;
+	margin: 0.66rem auto 0 auto;
+	padding: 0rem 0.66rem;
+	box-sizing: border-box;
+}
+.head .list{
+	width: auto;
+	height: 3.23rem;
+	display: flex;
+	justify-content: space-between;
+	line-height: 3.23rem;
+	color: #333;
+	font-size: 0.95rem;
+	border-bottom: 0.06rem solid #ddd;
+}
+.head .list:last-child{
+	border-bottom: 0.06rem solid #fff;
+}
+.title{
+	line-height: 2.64rem;
+	font-size: 1.02rem;
+	color: #333;
+	margin-left: 0.66rem;
+}
+.select{
+	width: 94%;
+	height: auto;
+	color: #ff4e67;
+	background: #fff;
+	border-radius: 0.33rem;
+	overflow: hidden;
+	padding: 0rem 0.66rem;
+	box-sizing: border-box;	
+	margin: 0 auto 0.66rem auto;
+	font-size: 0.95rem;
+	line-height: 3.23rem;
+}
+
+.select .hint{
+	color: #999;
+}
+.select .name{
+	display: flex;
+	justify-content: space-between;
+	color: #333;
+}
+.select .name span{
+	color: #666;
+	font-size: 0.81rem;
+}
+.select .add{
+	display: block;
+	border-top: 0.06rem solid #ddd;
+}
+.select .add .iconfont{
+	float: left;
+	margin-right: 0.33rem;
+}
+
+
+
+.option{
+	width: 100%;
+	height: auto;
+	max-height: 23.1rem;
+	background: #FFFFFF;
+	padding-bottom: 0.99rem;
+	position: fixed;
+	bottom: -23.1rem;
+	z-index: 2;
+	transition: 0.2s;
+}
+.optionOn{
+	bottom: 0rem;
+}
+.option .title{
+	position: relative;
+	text-align: center;	
+	margin-left: 0;
+	line-height: 4rem;
+}
+.option .title span{
+	font-size: 1rem;
+	color: #000;
+	line-height: 3rem;
+}
+.option .title .iconfont{
+	font-size: 1.18rem;
+	position: absolute;
+	color: #999;
+	right: 1.05rem;
+	top:0rem;
+}
+.option .li{
+	width: 100%;
+	height: auto;
+	display: flex;
+	font-size: 0.99rem;
+	line-height: 3.3rem;
+	justify-content: space-between;
+	margin-top: -0.06rem;
+	padding: 0 0.99rem;
+	box-sizing: border-box;
+	align-items: center;
+}
+.option .li span{
+	width: 10%;
+	text-align: center;
+	border-top: 0.06rem solid #DDDDDD;
+}
+.option .li div{
+	border-top: 0.06rem solid #DDDDDD;
+	width: 90%;
+	height: auto;
+}
+.option .li .add{
+	border-top: 0.06rem solid #DDDDDD;
+	width: 90%;
+}
+.bg{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: 1;
+	background: #000000;
+	opacity: 0.4;
+	transition: 0.2s;
+	visibility: hidden;
+	top: 0;
+}
+.bgOn{
+	visibility: visible;
+}
+.option .li .addName{
+	width: 30%;
+	height: 2.5rem;
+	border-radius: 1.25rem;
+	background: #ff4e67;
+	margin-top: 1.51rem;
+	color: #fff;
+	font-size: 1.05rem;
+	line-height: 2.5rem;
+}
+button{
+	width: 94%;
+	height: auto;
+	color: #fff;
+	font-size: 1.02rem;
+	background: #ff4e67;
+	border: none;
+	line-height: 2.5rem;
+	border-radius: 0.25rem;
+	margin: 0 auto;
+	display: block;
+}
+.option .delCard{
+	font-size: 0.85rem;
+	color: #999;
+}
+
+
+.visitBg{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	opacity: 0.5;
+	top: 0;
+	z-index: 998;
+}
+.visit{
+	position: fixed;
+	width: 70%;
+	height: auto;
+	text-align: center;
+	background: #fff;
+	z-index: 999;
+	top: 60%;
+	left: 50%;
+	margin: -35%;
+	border-radius: 0.3rem;
+	overflow: hidden;
+}
+.visit h3{
+	line-height: 3rem;
+	font-size: 1rem;
+}
+.visit p{
+	line-height: 1rem;
+	font-size: 0.8rem;
+	color: #666;
+	padding-bottom: 0.8rem;
+	border-bottom: 0.06rem solid #ddd;
+}
+.visit .select{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	margin: 0 0.06rem;
+}
+.visit span{
+	display: inline-block;
+	width: 50%;
+	line-height: 3rem;
+	font-size: 1.2rem;
+}
+.visit .confirm{
+	border-left: 0.06rem solid #ddd;
+	color: #54cc3b;
+}
+
+.success{
+	width: 30%;
+	height: auto;
+	background: #000;
+	opacity: 0.5;
+	position: fixed;
+	top: 30%;
+	left: 50%;
+	margin-left: -15%;
+	color: #fff;
+	display: inline-block;
+	text-align: center;
+	border-radius: 0.3rem;
+}
+.success .iconfont{
+	font-size: 5rem;
+}
+.success p{
+	color: #fff;
+	text-align: center;
+	padding-bottom: 1rem;
+}

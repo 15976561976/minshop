@@ -1,0 +1,29 @@
+
+<view class="container">
+ <view class="nav">
+  <view 
+	wx:for="{{nav}}"
+	wx:index="index" 
+	wx:key="index"  
+	class="nav-item {{active == index?'active':null}}"
+	data-index="{{item.id}}"
+	bindtap="navtab">
+    <text>{{item.title}}</text>
+  </view>
+ </view>
+ <view class="main">
+		<view wx:for="{{list}}" wx:key="index" class="list">
+			<view class="date">
+				<text>{{item.create_time}}</text>
+			</view>
+			<text class="way">转至{{item.bank_card.bank_card_name}}</text>
+			<view class="money">
+				<view class="num"><span>{{item.withdraw_price}}</span>元</view>
+				<text style="color: {{item.withdraw_status.status_name !== '已打款'? '#fb6252':null}};">{{item.withdraw_status.status_name}}</text>
+			</view>
+		</view>
+ </view>
+ <view class="nomore">
+  <text class="nomore-text">{{more}}</text>
+ </view>
+</view>

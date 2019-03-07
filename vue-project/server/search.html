@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui"/>
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+	<meta name="format-detection" content="telephone=no, email=no"/>
+	<meta charset="UTF-8">
+	<title>搜索</title>
+	<link rel="stylesheet" href="../css/core.css">
+	<link rel="stylesheet" href="../css/icon.css">
+	<link rel="stylesheet" href="../css/home.css">
+	<link rel="stylesheet" type="text/css" href="./css/search.css">
+	<link rel="stylesheet" type="text/css" href="../center/css/iconfont/iconfont.css">
+	<link rel="icon" type="image/x-icon" href="favicon.ico">	
+	<link href="iTunesArtwork@2x.png" sizes="114x114" rel="apple-touch-icon-precomposed">
+	
+
+</head>
+<body style="background:#eee" >
+	<div id="search">
+		<header class="aui-header-default aui-header-fixed aui-header-clear-bg my-search-header">
+
+			<div class="aui-header-center aui-header-center-clear my-search"  style="margin-right:5%;">
+				<div class="aui-header-search-box" style="background-color:#f7f7f7">
+					<i class="aui-icon aui-icon-small-search"></i>
+					<input id="" type="text"  placeholder="请输入您搜索的商品" class="aui-header-search" v-model="inp">
+				</div>
+				<span class="my-search-btn" @click="search($event, inp)">搜索</span>	
+			</div>
+
+		</header>
+		<div class="my-search-bar"></div>
+		<section id="history" class="my-search-history">
+			<h4 class="my-search-history-title">历史搜索</h4>
+			<ul class="my-search-history-list">
+				<li class="my-search-history-item" v-for="(title,ind) in titles">
+					<p class="my-search-history-item-text"
+					@click="search($event, title)"
+					@touchstart="displayDelete1($event, ind)"
+					@touchend="displayDelete2($event, ind)">{{title}}</p>
+				</li>
+			</ul>
+			<div class="my-search-clear" @click="clear">
+				<i class="iconfont icon-lajixiang"></i>
+				<span>清空搜索记录</span>
+			</div>
+			
+			
+				<div class="delete-mask" v-if="isShowDelete"></div>
+				<div class="my-search-delete" v-if="isShowDelete">
+					<h4 class="my-search-delete-title">确定要删除该条搜索历史？</h4>
+					<div>
+						<p class="my-search-delete-btn" @click="cancel">取消</p>
+						<p class="my-search-delete-btn delete-sure" @click="sure">确定</p>
+					</div>
+				</div>
+				
+				
+				
+				
+				<div class="staff" v-if="newarr.length >=1? true: false">服务人员</div>
+				<div class="ul" v-if="newarr.length >=1? true: false">
+				<a :href="'time.html?user='+item.id" class="li" v-for="(item,i) in newarr" >
+					<div class="portrait">
+						<img src=""/>
+					</div>
+					<div class="name">
+						<div>{{item.worker_name}}</div>
+						<span>{{item.level}}</span>
+					</div>
+					<div class="specialty">{{item.name}}</div>
+				</a>
+					
+				</div>
+				
+				<div class="type" v-if="typeLi.length>=1?true: false ">服务类型</div>
+				<div class="ul" v-if="typeLi.length >=1? true: false">
+					<a :href="'calendar.html?type='+item.id" class="li" v-for="(item,i) in typeLi" >
+						<span class="text">{{item.name}}</span>
+						<span class="iconfont icon-qianjin"></span>
+					</a>
+				</div>
+				<div class="load">没有更多了...</div>
+			</div>	
+		</section>
+		
+
+	<script type="text/javascript">
+		var height = window.screen.height;
+		var hist = document.getElementById("history");
+		hist.style.height = (height - 54)  + 'px';
+	</script>
+	<script type="text/javascript" src="../js/vue.js"></script>
+	<script type="text/javascript" src="../js/siteinfo.js"></script>
+	<script type="text/javascript" src="../js/vue-resource.js"></script>
+	<script type="text/javascript" src="./js/search.js"></script>
+</body>
+</html>

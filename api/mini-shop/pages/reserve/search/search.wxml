@@ -1,0 +1,66 @@
+<!--pages/search/search.wxml-->
+
+<form bindsubmit="search">
+	<view class="search"> 
+		<input type="text" name="text" bindinput="user" value="{{value}}" placeholder="请输入搜索内容" />
+		<button form-type="submit">
+			<span class="iconfont icon-sousuo"></span>
+		</button>
+	</view>
+</form>
+<view class="context">
+	<view class="searchinfo">
+		<view class="search-title">
+			<text>历史搜索</text>
+			<span class="iconfont icon-lajixiang col-7" bindtap="empty"></span>
+		</view>
+		<!-- 搜索记录 --> 
+		<view class="record">
+			<view bindtap="record" wx:for="{{history}}" wx:key="item" data-item="{{item}}">
+				{{item}}
+			</view>
+		</view>
+		<view class="result-tiele">搜索结果</view>
+	</view>
+	<view class="staff" wx:if="{{newarr.length>=1}}">服务人员</view>
+	<view class="ul">
+	<navigator 
+	class="li" 
+	wx:for="{{newarr}}" 
+	wx:for-index="i" 
+	wx:key="idx" 
+	url="../time/time"
+	bindtap="clickWorker"
+	data-id="{{item.id}}"
+	>
+		<veiw class="portrait">
+			<image mode="aspectFill" src="{{url}}{{item.file_name}}"></image>
+		</veiw>
+		<view class="name">
+			<view>{{item.worker_name}}</view>
+			<text>{{item.level}}</text>
+		</view>
+		<view class="specialty">{{item.name}}</view>
+	</navigator>
+		
+	</view>
+	
+	<view class="type" wx:if="{{typeLi.length>=1}}">服务类型</view>
+	<view class="ul">
+		
+		<navigator 
+		class="typeLi" 
+		wx:for="{{typeLi}}" 
+		wx:for-index="i" 
+		wx:key="idx" 
+		url="../weekCalendar/schedule"
+		bindtap="typeLi"
+		data-id="{{item.id}}"
+		data-text="{{item.name}}"
+		>
+			<text>{{item.name}}</text>
+			<span class="iconfont icon-xiangyoujiantou"></span>
+		</navigator>
+	</view>
+	<view class="load">没有更多了...</view>
+</view>

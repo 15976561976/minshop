@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no, email=no" />
+		<meta charset="UTF-8">
+		<title>预约服务</title>
+		<link rel="stylesheet" href="../css/core.css">
+		<link rel="stylesheet" type="text/css" href="./css/index.css">
+		<link rel="stylesheet" type="text/css" href="../center/css/iconfont/iconfont.css">
+		<link rel="icon" type="image/x-icon" href="favicon.ico">
+		<link href="iTunesArtwork@2x.png" sizes="114x114" rel="apple-touch-icon-precomposed">
+	</head>
+	<body>
+		<div id="reserve">
+			<header>
+				<div class="yh-center-header-top">
+					<a href="../me.html" class="yh-center-header-back">
+						<i class="iconfont icon-fanhui"></i>
+					</a>
+					<h4 class="yh-center-header-title">服务类型</h4>
+				</div>
+				<div class="yh-server-search">
+					<a href="search.html">
+						<i class="iconfont"></i>
+						<span>搜索</span>
+					</a>
+				</div>
+			</header>
+			<div class="yh-server-server-select">
+				<section class="yh-server-class" v-if="nav.length>=1?true:false">
+					<ul>
+						<li v-for="(item,i) in nav" class="yh-sever-class-item" @click="navClick(i)" :class="navIndex ==i? 'yh-sever-class-active':null">{{item.name}}</li>
+					</ul>
+				</section>
+				<section class="yh-server-server-items"  v-if="nav.length>=1?true:false">
+					<ul>
+						<div @click="toCalendar(item)" class="yh-server-server-item" v-for="(item,i) in nav[navIndex].child">
+								<span>{{item.name}}</span>
+								<i class="iconfont icon-qianjin"></i>
+						</div>
+					</ul>
+				</section>
+				<a href="./record.html" class="record">
+					<span class="iconfont icon-zhaorenjilu"></span>
+				</a>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="../js/vue.js"></script>
+	<script type="text/javascript" src="../js/siteinfo.js"></script>
+	<script type="text/javascript" src="../js/vue-resource.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	
+</html>
